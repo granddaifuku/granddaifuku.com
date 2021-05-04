@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://granddaifuku.com/"
 languageCode = "en-us"
 title = "Yudai Fukushima"
 theme = "hugo-developer-portfolio"
@@ -61,12 +61,13 @@ author = "Yudai Fukushima"
 
 [params.contact]
   enable = true
-  formAction = "" #contact form works with formspree.io
+  formAction = "dummy" #contact form works with formspree.io
 
   [params.footer]
   email = "grandnadaifuku@gmail.com"
   address = "Tokyo, Japan"
   googlemaps = "https://www.google.co.jp/maps/place/%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%9D%B1%E4%BA%AC/@35.6681625,139.6007831,11z/data=!3m1!4b1!4m5!3m4!1s0x60188b857628235d:0xcdd8aef709a2b520!8m2!3d35.6803997!4d139.7690174?hl=ja"
+
 
 [markup]
   [markup.highlight]
