@@ -1,0 +1,89 @@
+banner:
+  title: Hello! I'm Yudai.
+
+social:
+  twitter: dprocongrand
+  linkedin: yudai-fukushima-b89b0519b
+  github: granddaifuku
+  gitlab: ""
+  facebook: ""
+  instagram: daifuku_grand
+  gmail: grandnadaifuku
+
+about:
+  enable: true
+  content: 1st Year TMU Electronics Engineering and Computer Science Graduate Student
+  button:
+    btnText: Find out more
+    URL: "/about"
+
+skill:
+  enable: true
+  item:
+    - title: cpp
+      logo: /images/logos/cpp.svg
+      description: Details coming soon, contact me if you want to know more
+    - title: Python
+      logo: /images/logos/python.svg
+      description: Details coming soon, contact me if you want to know more
+    - title: Rust
+      logo: /images/logos/rust.svg
+      description: Details coming soon, contact me if you want to know more
+    - title: Git
+      logo: /images/logos/git.png
+      description: Details coming soon, contact me if you want to know more
+    - title: Emacs
+      logo: /images/logos/emacs.svg
+      description: My favorite editor
+
+experience:
+  enable: true
+  item:
+    - logo: 
+      title: Software Engineer
+      company: Future
+      duration: July 2020 - current
+    - logo:
+      title: Software Engineer Internship
+      company: TeamLab
+      duration: August 19th 2019 - August 30th 2019
+
+hackathons:
+  enable: false
+  item:
+    - title: Hack Cambridge 2019
+      description: Climate change simulator
+      image: https://res.cloudinary.com/samrobbins/image/upload/f_auto,q_auto/v1591793405/stickers/Hack_Cambridge_101_ozoq5d.png
+      url: none
+  
+certifications:
+  enable: false
+  item:
+    - title: Microsoft Azure Fundamentals
+      image: https://res.cloudinary.com/samrobbins/image/upload/v1592501459/microsoft-certified-fundamentals-badge_cpcgyn.svg
+      url: https://www.youracclaim.com/badges/b4cf7a86-eb83-478e-bfd0-9f427c3474a0/public_url
+  
+education:
+  enable: true
+  item:
+    - title: Master of Electronics Engineering and Computer Science
+      year: 2021 - current
+      academy: Tokyo Metropolitan University
+      image: /images/logos/tmu.png
+    - title: Bachelor of Engineering
+      year: 2017 - 2021
+      academy: Tokyo Metropolitan University
+      image: /images/logos/tmu.png
+  
+leadership:
+  enable: false
+  item:
+    - logo: https://res.cloudinary.com/samrobbins/image/upload/f_auto,q_auto/v1591793280/logos/logos_yl_qozav6.webp
+      title: Young Leader
+      company: The Scout Association
+      duration: September 2014 - July 2018
+  
+portfolio:
+  filter:
+    - label: Web Dev
+      value: web-dev

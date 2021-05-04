@@ -1,0 +1,81 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Yudai Fukushima"
+theme = "hugo-developer-portfolio"
+
+
+# Plugins
+[params.plugins]
+
+  # CSS Plugins
+  [[params.plugins.css]]
+  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css"
+
+  # JS Plugins
+  [[params.plugins.js]]
+  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"
+  [[params.plugins.js]]
+  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"
+
+
+# navigation
+[menu]
+
+  [[menu.main]]
+  name = "About"
+  URL = "about"
+  weight=1
+
+  [[menu.main]]
+  name = "Publications"
+  url = "publications"
+  weight=2
+
+  [[menu.main]]
+  name = "Portfolio"
+  URL = "portfolio"
+  weight=3
+
+  [[menu.main]]
+  name = "Blog"
+  URL = "blog"
+  weight=4
+
+  [[menu.main]]
+  name = "YouTube"
+  URL = "youtube"
+  weight=5
+
+  [[menu.main]]
+  name = "Contact"
+  URL = "contact"
+  weight=6
+
+
+[params]
+home = "Home"
+# Meta data
+description = "The website of Yudai Fukushima, 1st Year Computer Science graduage student at Tokyo Metropolitan University"
+author = "Yudai Fukushima"
+
+
+[params.contact]
+  enable = true
+  formAction = "" #contact form works with formspree.io
+
+  [params.footer]
+  email = "grandnadaifuku@gmail.com"
+  address = "Tokyo, Japan"
+  googlemaps = "https://www.google.co.jp/maps/place/%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%9D%B1%E4%BA%AC/@35.6681625,139.6007831,11z/data=!3m1!4b1!4m5!3m4!1s0x60188b857628235d:0xcdd8aef709a2b520!8m2!3d35.6803997!4d139.7690174?hl=ja"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "rainbow_dash"
+    tabWidth = 4
