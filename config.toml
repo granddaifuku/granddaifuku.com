@@ -85,3 +85,15 @@ author = "Yudai Fukushima"
     noClasses = true
     style = "rainbow_dash"
     tabWidth = 4
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  expiryDate = ["expiryDate"]
+  lastmod = [":git", "lastmod", "date", "publishDate"]
+  publishDate = ["publishDate", "date"]
+
+enableGitInfo = true
