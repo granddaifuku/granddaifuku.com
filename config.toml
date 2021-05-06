@@ -2,7 +2,12 @@ baseURL = "http://granddaifuku.com/"
 languageCode = "en-us"
 title = "Yudai Fukushima"
 theme = "hugo-developer-portfolio"
+googleAnalytics = ""
 
+
+# [module]
+#   [[module.imports]]
+#     path = "github.com/samrobbins85/hugo-developer-portfolio"
 
 # Plugins
 [params.plugins]
