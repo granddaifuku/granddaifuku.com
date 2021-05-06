@@ -2,23 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://granddaifuku.com/about/</loc>
+    <lastmod>2021-05-06T16:36:30+09:00</lastmod>
+  </url><url>
     <loc>http://granddaifuku.com/</loc>
-    <lastmod>2019-10-26T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://granddaifuku.com/blog/</loc>
-    <priority>0</priority>
-  </url><url>
-    <loc>http://granddaifuku.com/contact/</loc>
-    <priority>0</priority>
-  </url><url>
-    <loc>http://granddaifuku.com/portfolio/</loc>
-    <priority>0</priority>
-  </url><url>
-    <loc>http://granddaifuku.com/publications/</loc>
-    <priority>0</priority>
-  </url><url>
-    <loc>http://granddaifuku.com/youtube/</loc>
-    <priority>0</priority>
+    <lastmod>2021-05-06T16:36:30+09:00</lastmod>
   </url><url>
     <loc>http://granddaifuku.com/categories/</loc>
   </url><url>

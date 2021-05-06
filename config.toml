@@ -4,6 +4,7 @@ title = "Yudai Fukushima"
 theme = "hugo-developer-portfolio"
 googleAnalytics = ""
 
+enableGitInfo = true
 
 # [module]
 #   [[module.imports]]
@@ -96,4 +97,3 @@ author = "Yudai Fukushima"
   lastmod = [":git", "lastmod", "date", "publishDate"]
   publishDate = ["publishDate", "date"]
 
-enableGitInfo = true

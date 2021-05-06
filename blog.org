@@ -1,0 +1,4 @@
+#+hugo_base_dir: .
+#+hugo_section: blog
+#+author: Yudai Fukushima
+#+hugo_auto_set_lastmod: t

@@ -1,7 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "About"
 date: {{ .Date }}
 author: "Yudai Fukushima"
-draft: true
 ---
 
