@@ -31,3 +31,21 @@ HUGO_VERSION = "0.83.1"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+from = "https://sad-shirley-3d5d8f.netlify.app/*"
+to = "https://www.granddaifuku.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "http://sad-shirley-3d5d8f.netlify.app/*"
+to = "https://www.granddaifuku.com/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "http://www.granddaifuku.com/*"
+to = "https://www.granddaifuku.com/"
+status = 301
+force = true
