@@ -6,5 +6,5 @@ author: Yudai Fukushima
 title: Yudai Fukushima' Website
 description: I am a 1st year TMU EECS graduate student.
 images:
-- home-cover.png
+- /logos/tmu.png
 ---
