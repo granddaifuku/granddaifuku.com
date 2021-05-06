@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yudai Fukushima</title>
-    <link>http://example.org/publications/</link>
+    <link>http://granddaifuku.com/publications/</link>
     <description>Recent content on Yudai Fukushima</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/publications/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://granddaifuku.com/publications/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

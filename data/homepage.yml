@@ -1,3 +1,4 @@
+---
 banner:
   title: Hello! I'm Yudai.
 
@@ -21,19 +22,19 @@ skill:
   enable: true
   item:
     - title: cpp
-      logo: /images/logos/cpp.svg
+      logo: /logos/cpp.svg
       description: Details coming soon, contact me if you want to know more
     - title: Python
-      logo: /images/logos/python.svg
+      logo: /logos/python.svg
       description: Details coming soon, contact me if you want to know more
     - title: Rust
-      logo: /images/logos/rust.svg
+      logo: /logos/rust.svg
       description: Details coming soon, contact me if you want to know more
     - title: Git
-      logo: /images/logos/git.png
+      logo: /logos/git.png
       description: Details coming soon, contact me if you want to know more
     - title: Emacs
-      logo: /images/logos/emacs.svg
+      logo: /logos/emacs.svg
       description: My favorite editor
 
 experience:
@@ -69,11 +70,11 @@ education:
     - title: Master of Electronics Engineering and Computer Science
       year: 2021 - current
       academy: Tokyo Metropolitan University
-      image: /images/logos/tmu.png
+      image: /logos/tmu.png
     - title: Bachelor of Engineering
       year: 2017 - 2021
       academy: Tokyo Metropolitan University
-      image: /images/logos/tmu.png
+      image: /logos/tmu.png
   
 leadership:
   enable: false
