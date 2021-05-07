@@ -46,7 +46,6 @@ force = true
 
 [[redirects]]
 from = "http://www.granddaifuku.com/*"
-to = "https://www.granddaifuku.com/"
+to = "https://www.granddaifuku.com/:splat"
 status = 301
 force = true
-
