@@ -1,4 +1,4 @@
-baseURL = "http://granddaifuku.com/"
+# baseURL = "https://granddaifuku.com/"
 languageCode = "en-us"
 # title = "Yudai Fukushima"
 theme = "hugo-developer-portfolio"
@@ -27,10 +27,12 @@ DefaultContentLanguageInSubdir = true
 [languages]
   [languages.en]
   title = "Yudai Fukushima"
+  baseURL = "https://granddaifuku.com/en/"
   weight = 1
   contentDir = "content/en"
   [languages.ja]
   title = "Yudai Fukushima's webpage"
+  baseURL = "https://granddaifuku.com/ja/"
   weight = 2
   contentDir = "content/ja"
 

@@ -2,40 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://granddaifuku.com/ja/categories/</loc>
+    <loc>https://granddaifuku.com/ja/about/</loc>
+    <lastmod>2021-05-07T21:28:12+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://granddaifuku.com/categories/"
+                href="https://granddaifuku.com/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://granddaifuku.com/ja/categories/"
+                href="https://granddaifuku.com/ja/about/"
                 />
   </url><url>
-    <loc>http://granddaifuku.com/ja/tags/</loc>
+    <loc>https://granddaifuku.com/ja/</loc>
+    <lastmod>2021-05-07T21:28:12+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://granddaifuku.com/tags/"
+                href="https://granddaifuku.com/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://granddaifuku.com/ja/tags/"
+                href="https://granddaifuku.com/ja/"
                 />
   </url><url>
-    <loc>http://granddaifuku.com/ja/</loc>
+    <loc>https://granddaifuku.com/ja/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://granddaifuku.com/"
+                href="https://granddaifuku.com/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://granddaifuku.com/ja/"
+                href="https://granddaifuku.com/ja/categories/"
+                />
+  </url><url>
+    <loc>https://granddaifuku.com/ja/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://granddaifuku.com/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://granddaifuku.com/ja/tags/"
                 />
   </url>
 </urlset>

@@ -2,8 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yudai Fukushima&#39;s webpage</title>
-    <link>http://granddaifuku.com/ja/</link>
+    <link>https://granddaifuku.com/ja/</link>
     <description>Recent content on Yudai Fukushima&#39;s webpage</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://granddaifuku.com/ja/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 May 2021 19:33:41 +0900</lastBuildDate><atom:link href="https://granddaifuku.com/ja/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,44 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://granddaifuku.com/about/</loc>
-    <lastmod>2021-05-06T20:58:59+09:00</lastmod>
-  </url><url>
-    <loc>http://granddaifuku.com/</loc>
-    <lastmod>2021-05-06T20:58:59+09:00</lastmod>
+    <loc>https://granddaifuku.com/en/about/</loc>
+    <lastmod>2021-05-07T21:28:12+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://granddaifuku.com/ja/"
+                href="https://granddaifuku.com/ja/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://granddaifuku.com/"
+                href="https://granddaifuku.com/en/about/"
                 />
   </url><url>
-    <loc>http://granddaifuku.com/categories/</loc>
+    <loc>https://granddaifuku.com/en/</loc>
+    <lastmod>2021-05-07T21:28:12+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://granddaifuku.com/ja/categories/"
+                href="https://granddaifuku.com/ja/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://granddaifuku.com/categories/"
+                href="https://granddaifuku.com/en/"
                 />
   </url><url>
-    <loc>http://granddaifuku.com/tags/</loc>
+    <loc>https://granddaifuku.com/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://granddaifuku.com/ja/tags/"
+                href="https://granddaifuku.com/ja/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://granddaifuku.com/tags/"
+                href="https://granddaifuku.com/en/categories/"
+                />
+  </url><url>
+    <loc>https://granddaifuku.com/en/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://granddaifuku.com/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://granddaifuku.com/en/tags/"
                 />
   </url>
 </urlset>

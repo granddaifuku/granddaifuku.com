@@ -49,3 +49,4 @@ from = "http://www.granddaifuku.com/*"
 to = "https://www.granddaifuku.com/"
 status = 301
 force = true
+
