@@ -1,10 +1,11 @@
 baseURL = "http://granddaifuku.com/"
 languageCode = "en-us"
-title = "Yudai Fukushima"
+# title = "Yudai Fukushima"
 theme = "hugo-developer-portfolio"
 googleAnalytics = ""
 
 enableGitInfo = true
+DefaultContentLanguageInSubdir = true
 
 # [module]
 #   [[module.imports]]
@@ -22,6 +23,16 @@ enableGitInfo = true
   URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"
   [[params.plugins.js]]
   URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"
+
+[languages]
+  [languages.en]
+  title = "Yudai Fukushima"
+  weight = 1
+  contentDir = "content/en"
+  [languages.ja]
+  title = "Yudai Fukushima's webpage"
+  weight = 2
+  contentDir = "content/ja"
 
 
 # navigation

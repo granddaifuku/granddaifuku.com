@@ -1,0 +1,14 @@
+#+hugo_base_dir: .
+#+hugo_section: blog
+#+author: Yudai Fukushima
+#+hugo_auto_set_lastmod: t
+
+* Blog Ideas
+** TODO Codeforces #713(Div.3) E: Permutation by Sum
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: cf-713-div3-e
+   :EXPORT_DATE: 2021-05-07
+   :EXPORT_HUGO_SECTION*: 2021/05
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail "images/"
+   :END:
+ 
