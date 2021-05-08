@@ -1,0 +1,9 @@
+#+hugo_base_dir: .
+#+hugo_section: /ja/blog
+#+author: Yudai Fukushima
+#+hugo_auto_set_lastmod: t
+
+* Blog Ideas
+  :PROPERTIES:
+  :VISIBILITY: children
+  :END:

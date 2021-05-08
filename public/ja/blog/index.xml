@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Yudai Fukushima&#39;s webpage</title>
-    <link>https://granddaifuku.com/ja/</link>
-    <description>Recent content on Yudai Fukushima&#39;s webpage</description>
+    <title>Blogs on Yudai Fukushima&#39;s webpage</title>
+    <link>https://granddaifuku.com/ja/blog/</link>
+    <description>Recent content in Blogs on Yudai Fukushima&#39;s webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 May 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://granddaifuku.com/ja/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 May 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://granddaifuku.com/ja/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Codeforces #713(Div.3) &lt;br&gt; E: Permutation by Sum</title>
       <link>https://granddaifuku.com/ja/blog/2021/05/cf-713-div3-e/</link>
