@@ -2,6 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://granddaifuku.com/en/contact/</loc>
+    <lastmod>2021-05-08T21:04:38+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://granddaifuku.com/ja/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://granddaifuku.com/en/contact/"
+                />
+  </url><url>
+    <loc>https://granddaifuku.com/en/</loc>
+    <lastmod>2021-05-08T21:04:38+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://granddaifuku.com/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://granddaifuku.com/en/"
+                />
+  </url><url>
     <loc>https://granddaifuku.com/en/about/</loc>
     <lastmod>2021-05-07T21:28:12+09:00</lastmod>
     <xhtml:link
@@ -13,19 +39,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://granddaifuku.com/en/about/"
-                />
-  </url><url>
-    <loc>https://granddaifuku.com/en/</loc>
-    <lastmod>2021-05-07T21:28:12+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://granddaifuku.com/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://granddaifuku.com/en/"
                 />
   </url><url>
     <loc>https://granddaifuku.com/en/categories/</loc>
