@@ -5,6 +5,16 @@
     <link>https://granddaifuku.com/ja/categories/</link>
     <description>Recent content in Categories on Yudai Fukushima&#39;s webpage</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://granddaifuku.com/ja/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 May 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://granddaifuku.com/ja/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codeforces</title>
+      <link>https://granddaifuku.com/ja/categories/codeforces/</link>
+      <pubDate>Fri, 07 May 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://granddaifuku.com/ja/categories/codeforces/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
