@@ -2,11 +2,11 @@
 title = "Codeforces #713(Div.3) <br> E: Permutation by Sum"
 author = ["Yudai Fukushima"]
 date = 2021-05-07
-lastmod = 2021-05-08T18:21:32+09:00
+lastmod = 2021-05-08T20:44:06+09:00
 categories = ["Codeforces"]
 draft = false
 thumbnail = "images/cf.png"
-description = "test"
+description = "Codeforces #713 E 解説"
 +++
 
 ## 問題概要 {#問題概要}
