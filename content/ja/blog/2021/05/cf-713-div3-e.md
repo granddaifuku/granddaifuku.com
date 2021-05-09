@@ -2,7 +2,7 @@
 title = "Codeforces #713(Div.3) <br> E: Permutation by Sum"
 author = ["Yudai Fukushima"]
 date = 2021-05-07
-lastmod = 2021-05-08T20:44:06+09:00
+lastmod = 2021-05-09T11:37:30+09:00
 categories = ["Codeforces"]
 draft = false
 thumbnail = "images/cf.png"
@@ -23,7 +23,7 @@ description = "Codeforces #713 E 解説"
 
 **最小値**    
 初項 1、 項数 \\(m\\) 、公差 1 の等差数列としてみると、  
-\\(min(m) = \frac{m \* (m + 1)}{2}\\)  
+\\(min(m) = \frac{m(m + 1)}{2}\\)  
 が導かれる。  
 
 **最大値**    
@@ -44,5 +44,6 @@ description = "Codeforces #713 E 解説"
 \\(max(i) - s \geq 0\\) かつ \\(s - i \geq min(k - 1)\\) を満たすならば  
 配列 \\(res\\) の \\(l + k - 1\\) に \\(i\\) を代入、\\(k = k - 1, s = s - i\\) で置き換える。  
 これを \\(k\\) が 0 になるまで繰り返し、最終的に \\(s = 0\\) が達成できれば OK である。  
+あとは配列の空いている部分に使用していない文字を代入していけば良い。  
 
 [提出したソースコード](https://codeforces.com/contest/1512/submission/115426822)
