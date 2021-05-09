@@ -2,7 +2,7 @@
 title = "Codeforces #713(Div.3) <br> E: Permutation by Sum"
 author = ["Yudai Fukushima"]
 date = 2021-05-09
-lastmod = 2021-05-09T16:44:39+09:00
+lastmod = 2021-05-09
 categories = ["Codeforces"]
 draft = false
 thumbnail = "images/cf.png"
