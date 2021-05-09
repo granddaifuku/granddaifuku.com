@@ -20,7 +20,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" property="og:description" content="The website of Yudai Fukushima, 1st Year Computer Science graduage student at Tokyo Metropolitan University">
+  <meta name="description" property="og:description" content="Codeforces #713 E">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Yudai Fukushima">
   <meta name="generator" content="Hugo 0.83.1" />
@@ -36,8 +36,7 @@
   
   <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
 
-  <link rel="alternate" type="application/rss+xml" href="https://granddaifuku.com/en/categories/index.xml" title="Yudai Fukushima" />
-<script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
 
   <!--Favicon-->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -46,7 +45,7 @@
   <link rel="manifest" href="/site.webmanifest">
 
 </head>
-<body class="categories">
+<body class="blog">
     <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
         <div class="uk-navbar-right">
@@ -208,48 +207,132 @@
 
 
 
+<style>
+  p {
+    margin: 0
+  }
 
-<section class="uk-margin-large-bottom">
-        <h1 class="uk-heading-large uk-text-center">Categories</h1>
-</section>
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
 
 
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Codeforces #713(Div.3) <br> E: Permutation by Sum</h1>
+    <p class="uk-text-center uk-text-lead">Codeforces #713 E</p>
+    <p class="uk-text-center">Published on May 09, 2021</p>
+    <p class="uk-text-center">Reading time: 1 minutes.</p>
+    
 
-<section class="uk-margin-large-bottom">
-    <div class="uk-container">
-        <div class="uk-grid-small uk-child-width-1-4@s uk-text-center" uk-grid uk-height-match="target: > div > div > .card-body">
-            
+    <hr class="full-width">
+    
 
-            <div>
-                <div class="uk-card uk-card-default uk-width-1@m">
-                    <div class="card-body">
-                    <div class="uk-card-header">
-                      <div class="uk-grid-small uk-flex-middle" uk-grid>
-						<div class="uk-width-auto">
-						  <img class="uk-border-circle" width="40" height="40" src="https://granddaifuku.com/">
-						</div>
-                            <div class="uk-width-expand">
-                                <h3 class="uk-card-title uk-margin-remove-bottom">Codeforces</h3>
-                                <p class="uk-text-meta uk-margin-remove-top"><time
-                                        datetime="2021-05-09 00:00:00 &#43;0900 JST">May 9, 2021</time></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-card-body">
-                        <p></p>
-                    </div>
-                </div>
-                    <div class="uk-card-footer">
-                        <a href="/en/categories/codeforces/" class="uk-button uk-button-text">Read more</a>
-                    </div>
-                </div>
-            </div>
-            
-
-        </div>
+    <div class="content">
+      <h2 id="problem-overview">Problem Overview</h2>
+<ul>
+<li>Consider the permutation 1 to \(n\) called P.</li>
+<li>The parameters \(l, r, s\) that satisfies \(1 \leq l \leq r \leq n\) and \(1 \leq s \leq \frac{n(n + 1)}{2}\) are give.</li>
+<li>Find the permutation which satisfies \(P_{l} + P_{l + 1} + &hellip; + P_{r} = s\).</li>
+<li>Print any permutation of length \(n\) that fits the condition above if such a permutation exists; otherwise, -1.</li>
+</ul>
+<h2 id="problem-explanation">Problem Explanation</h2>
+<p>First, the minimum and the maximum value we can generate with the length \(r - l + 1\).<br>
+Hereafter, we define \(k = r - l + 1\).</p>
+<p><strong>Minimum Value</strong><br>
+As an arithmetic sequence with first term 1, term number \(m\), and tolerance -1, we can derive the minimum value.<br>
+\(min(m) = \frac{m(m + 1)}{2}\)</p>
+<p><strong>Maximum Value</strong><br>
+As an arithmetic sequence with first term \(x\), term number \(m\), and tolerance -1, we can derive the maximum value.</p>
+<p>\(max(x, m) = \frac{m * (2 * x + (m - 1) * -1)}{2}\) <br>
+\(max(x, m) = \frac{m(2x - m + 1)}{2}\)</p>
+<p>Any number \(s\) that satisfies \(min(k) \leq s \leq max(n, k)\) meet the condition.</p>
+<p><strong>Coding</strong><br>
+First, we prepare the vector \(res\) with size \(n\) to push the results.<br>
+Consider in descending order.<br>
+Start the for loop from \(n\),<br>
+if \(i\) meets the condition \(max(i) - s \geq 0\) and \(s - i \geq min(k - 1)\),<br>
+put \(i\) to the \(res[l + k - i]\) and replace \(k = k - 1, s = s - i\).<br>
+Iterate this until \(k\) becomes 0, and then if \(s = 0\) is achieved, we find the permuation; otherwise, prints -1.<br>
+The remaining part of the implementation is to insert the unused numbers into the empty parts of the vector.</p>
+<p><a href="https://codeforces.com/contest/1512/submission/115426822">Source Code</a></p>
 
     </div>
+  </div>
+  </div>
 </section>
+
 
 
     </div>

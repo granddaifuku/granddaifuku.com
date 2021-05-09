@@ -9,7 +9,7 @@
   :VISIBILITY: children
   :END:
   
-** TODO Codeforces #713(Div.3) <br> E: Permutation by Sum :@Codeforces:
+** DONE Codeforces #713(Div.3) <br> E: Permutation by Sum       :@Codeforces:
    :PROPERTIES:
    :EXPORT_FILE_NAME: cf-713-div3-e
    :EXPORT_DATE: 2021-05-09
