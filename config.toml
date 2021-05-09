@@ -1,4 +1,4 @@
-# baseURL = "https://granddaifuku.com/"
+baseURL = "https://granddaifuku.com/"
 languageCode = "en-us"
 # title = "Yudai Fukushima"
 theme = "hugo-developer-portfolio"
@@ -29,48 +29,109 @@ DefaultContentLanguageInSubdir = true
 [languages]
   [languages.en]
   title = "Yudai Fukushima"
-  baseURL = "https://granddaifuku.com/en/"
+  # baseURL = "https://granddaifuku.com/en/"
   weight = 1
   contentDir = "content/en"
+  
+    [[languages.en.menu.main]]
+    name = "About"
+    URL = "/en/about"
+    weight=1
+
+    [[languages.en.menu.main]]
+    name = "Publications"
+    url = "/en/publications"
+    weight=2
+
+    [[languages.en.menu.main]]
+    name = "Portfolio"
+    URL = "/en/portfolio"
+    weight=3
+
+    [[languages.en.menu.main]]
+    name = "Blog"
+    URL = "/en/blog"
+    weight=4
+
+    [[languages.en.menu.main]]
+    name = "YouTube"
+    URL = "/en/youtube"
+    weight=5
+
+    [[languages.en.menu.main]]
+	name = "Contact"
+    URL = "/en/contact"
+    weight=6
+  
   [languages.ja]
   title = "Yudai Fukushima's webpage"
-  baseURL = "https://granddaifuku.com/ja/"
+  # baseURL = "https://granddaifuku.com/ja/"
   weight = 2
   contentDir = "content/ja"
+  
+    [[languages.ja.menu.main]]
+    name = "About"
+    URL = "/ja/about"
+    weight=1
+
+    [[languages.ja.menu.main]]
+    name = "Publications"
+    url = "/ja/publications"
+    weight=2
+
+    [[languages.ja.menu.main]]
+    name = "Portfolio"
+    URL = "/ja/portfolio"
+    weight=3
+
+    [[languages.ja.menu.main]]
+    name = "Blog"
+    URL = "/ja/blog"
+    weight=4
+
+    [[languages.ja.menu.main]]
+    name = "YouTube"
+    URL = "/ja/youtube"
+    weight=5
+
+    [[languages.ja.menu.main]]
+    name = "Contact"
+    URL = "/ja/contact"
+    weight=6
 
 
 # navigation
-[menu]
+# [menu]
 
-  [[menu.main]]
-  name = "About"
-  URL = "about"
-  weight=1
+#   [[menu.main]]
+#   name = "About"
+#   URL = "about"
+#   weight=1
 
-  [[menu.main]]
-  name = "Publications"
-  url = "publications"
-  weight=2
+#   [[menu.main]]
+#   name = "Publications"
+#   url = "publications"
+#   weight=2
 
-  [[menu.main]]
-  name = "Portfolio"
-  URL = "portfolio"
-  weight=3
+#   [[menu.main]]
+#   name = "Portfolio"
+#   URL = "portfolio"
+#   weight=3
 
-  [[menu.main]]
-  name = "Blog"
-  URL = "blog"
-  weight=4
+#   [[menu.main]]
+#   name = "Blog"
+#   URL = "blog"
+#   weight=4
 
-  [[menu.main]]
-  name = "YouTube"
-  URL = "youtube"
-  weight=5
+#   [[menu.main]]
+#   name = "YouTube"
+#   URL = "youtube"
+#   weight=5
 
-  [[menu.main]]
-  name = "Contact"
-  URL = "contact"
-  weight=6
+#   [[menu.main]]
+#   name = "Contact"
+#   URL = "contact"
+#   weight=6
 
 
 [params]
