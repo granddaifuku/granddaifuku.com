@@ -2,7 +2,7 @@
 title = "Codeforces #713(Div.3) <br> E: Permutation by Sum"
 author = ["Yudai Fukushima"]
 date = 2021-05-09
-lastmod = 2021-05-09T12:26:43+09:00
+lastmod = 2021-05-09T12:29:28+09:00
 categories = ["Codeforces"]
 draft = false
 thumbnail = "images/cf.png"
@@ -23,7 +23,7 @@ First, the minimum and the maximum value we can generate with the length \\(r - 
 Hereafter, we define \\(k = r - l + 1\\).  
 
 **Minimum Value**  
-As an arithmetic sequence with first term 1, term number \\(m\\), and tolerance -1, we can derive the minimum value.  
+As an arithmetic sequence with first term 1, term number \\(m\\), and tolerance 1, we can derive the minimum value.  
 \\(min(m) = \frac{m(m + 1)}{2}\\)  
 
 **Maximum Value**  

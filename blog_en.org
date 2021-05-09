@@ -30,7 +30,7 @@
 	Hereafter, we define $k = r - l + 1$.  
 
 	*Minimum Value*
-	As an arithmetic sequence with first term 1, term number $m$, and tolerance -1, we can derive the minimum value.
+	As an arithmetic sequence with first term 1, term number $m$, and tolerance 1, we can derive the minimum value.
 	$min(m) = \frac{m(m + 1)}{2}$
 
 	*Maximum Value*
