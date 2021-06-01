@@ -162,6 +162,10 @@ author = "Yudai Fukushima"
     noClasses = true
     style = "rainbow_dash"
     tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+	  unsafe = true
+	
 
 [taxonomies]
   category = "categories"
