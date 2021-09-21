@@ -54,14 +54,9 @@ DefaultContentLanguageInSubdir = true
     weight=4
 
     [[languages.en.menu.main]]
-    name = "YouTube"
-    URL = "/en/youtube"
-    weight=5
-
-    [[languages.en.menu.main]]
 	name = "Contact"
     URL = "/en/contact"
-    weight=6
+    weight=5
   
   [languages.ja]
   title = "Yudai Fukushima's webpage"
@@ -90,14 +85,9 @@ DefaultContentLanguageInSubdir = true
     weight=4
 
     [[languages.ja.menu.main]]
-    name = "YouTube"
-    URL = "/ja/youtube"
-    weight=5
-
-    [[languages.ja.menu.main]]
     name = "Contact"
     URL = "/ja/contact"
-    weight=6
+    weight=5
 
 
 # navigation

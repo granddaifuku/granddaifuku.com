@@ -20,7 +20,7 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" property="og:description" content="Codeforces #713 E 解説">
+  <meta name="description" property="og:description" content="Rust lettre &amp; さくらメールボックス">
   <meta name="image" property="og:image" content="/">
   <meta name="author" content="Yudai Fukushima">
   <meta name="generator" content="Hugo 0.88.1" />
@@ -269,45 +269,123 @@
 
 <section>
   <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
-    <h1 class="uk-text-center uk-heading-medium">Codeforces #713(Div.3) <br> E: Permutation by Sum</h1>
-    <p class="uk-text-center uk-text-lead">Codeforces #713 E 解説</p>
-    <p class="uk-text-center">Published on May 07, 2021</p>
-    <p class="uk-text-center">Reading time: 2 minutes.</p>
+    <h1 class="uk-text-center uk-heading-medium">Rust(lettre)とさくらのメールボックスでメール送信</h1>
+    <p class="uk-text-center uk-text-lead">Rust lettre &amp; さくらメールボックス</p>
+    <p class="uk-text-center">Published on Jun 01, 2021</p>
+    <p class="uk-text-center">Reading time: 5 minutes.</p>
     
 
     <hr class="full-width">
     
 
     <div class="content">
-      <h2 id="問題概要">問題概要</h2>
+      <h2 id="はじめに">はじめに</h2>
+<p>Rust の lettre クレートでさくらのメールボックスを用いて独自ドメインでのメールを送信する際の記録です。</p>
+<p>前提としては、</p>
 <ul>
-<li>1 から \(n\) までの順列 \(P\) を考える</li>
-<li>\(1 \leq l \leq r \leq n\) の \(l, r\), \(1 \leq s \leq \frac{n(n + 1)}{2}\) の \(s\) が与えられる</li>
-<li>\(P_{l} + P_{l + 1} + &hellip; + P_{r} = s\) となる 1 から \(n\) までの順列が存在するならばそれを出力、存在しないならば -1 を出力する</li>
+<li>
+<p>xdomain にて独自ドメインを取得済み</p>
+</li>
+<li>
+<p>Netlify DNS にネームサーバを設定してる</p>
+<p>独自ドメインのメールアドレスでメールの送信がしたいが、ネームサーバは変更したくないというような状態です。</p>
+</li>
 </ul>
-<h2 id="解説">解説</h2>
-<p>1 から \(n\) までの順列の中で長さ \(r - l + 1\) で生成できる最小値、最大値を考える。<br>
-以下、\(k = r - l + 1\) として扱う。</p>
-<p><strong>最小値</strong> <br>
-初項 1、 項数 \(m\) 、公差 1 の等差数列としてみると、<br>
-\(min(m) = \frac{m(m + 1)}{2}\)<br>
-が導かれる。</p>
-<p><strong>最大値</strong> <br>
-初項 \(x\) 、項数 \(m\) 、公差 -1 の等差数列としてみると、</p>
-<p>\(max(x, m) = \frac{m * (2 * x + (m - 1) * -1)}{2}\) <br>
-\(max(x, m) = \frac{m(2x - m + 1)}{2}\)</p>
-<p>が導かれる。</p>
-<p>\(min(k) \leq s \leq max(n, k)\) の間にある \(s\) は条件を満たすことがわかる。<br>
-残るは実装のみで、\(n\) から大きい順に 指定の配列に入れるか入れないかを決めていけば良い。</p>
-<p><strong>方針</strong><br>
-初めに答えを入れる用の配列 \(res\) を用意する。<br>
-次に \(n\) から大きい順に考えていく。<br>
-\(n\) からfor 文を回し、<br>
-\(max(i, k) - s \geq 0\) かつ \(s - i \geq min(k - 1)\) を満たすならば<br>
-配列 \(res\) の \(l + k\) に \(i\) を代入、\(k = k - 1, s = s - i\) で置き換える。<br>
-これを \(k\) が 0 になるまで繰り返し、最終的に \(s = 0\) が達成できれば OK である。<br>
-あとは配列の空いている部分に使用していない文字を代入していけば良い。</p>
-<p><a href="https://codeforces.com/contest/1512/submission/115426822">提出したソースコード</a></p>
+<h2 id="lettre-とは"><a href="https://github.com/lettre/lettre">lettre</a> とは</h2>
+<p>Rust のメーラライブラリで、</p>
+<ul>
+<li>
+<p>SMTP(Simple Mail Transfer Protocol)を用いてセキュアなメールの送信ができる</p>
+</li>
+<li>
+<p>ファイルの送信</p>
+</li>
+<li>
+<p>非同期サポート</p>
+</li>
+<li>
+<p>ユニコードサポート</p>
+<p>などなど欲しい機能が一通り揃っています。</p>
+</li>
+</ul>
+<h2 id="さくらのメールボックスとは">さくらのメールボックスとは</h2>
+<p>かの有名なさくらインターネットさんが用意されているプランの一つで、</p>
+<ul>
+<li>
+<p>独自ドメインのメールが使える</p>
+</li>
+<li>
+<p>月額 87円（安すぎでは？）</p>
+<p>と主に月額にひかれて使い始めました。</p>
+</li>
+</ul>
+<h2 id="やりたいこと">やりたいこと</h2>
+<p><a href="https://www.sakura.ne.jp/mail/">さくらのメールボックスの登録</a>、<a href="https://help.sakura.ad.jp/360000237321/#03">独自ドメインの追加</a>、<a href="https://help.sakura.ad.jp/360000225362/#02">メールアドレスの作成</a>は済んでいるものとします。<br>
+Rust 内から lettre を使って独自ドメインからメールを送信しましょう。</p>
+<p>まず、公式のサンプルを見てみます。</p>
+<pre tabindex="0"><code class="language-rustic" data-lang="rustic">use lettre::transport::smtp::authentication::Credentials;
+use lettre::{Message, SmtpTransport, Transport};
+
+let email = Message::builder()
+  .from(&quot;NoBody &lt;nobody@domain.tld&gt;&quot;.parse().unwrap())
+  .reply_to(&quot;Yuin &lt;yuin@domain.tld&gt;&quot;.parse().unwrap())
+  .to(&quot;Hei &lt;hei@domain.tld&gt;&quot;.parse().unwrap())
+  .subject(&quot;Happy new year&quot;)
+  .body(String::from(&quot;Be happy!&quot;))
+  .unwrap();
+
+let creds = Credentials::new(&quot;smtp_username&quot;.to_string(), &quot;smtp_password&quot;.to_string());
+
+// Open a remote connection to gmail
+let mailer = SmtpTransport::relay(&quot;smtp.gmail.com&quot;)
+  .unwrap()
+  .credentials(creds)
+  .build();
+
+// Send the email
+match mailer.send(&amp;email) {
+  Ok(_) =&gt; println!(&quot;Email sent successfully!&quot;),
+  Err(e) =&gt; panic!(&quot;Could not send email: {:?}&quot;, e),
+</code></pre><p>ここで必要になるものが</p>
+<pre tabindex="0"><code class="language-rustic" data-lang="rustic">let creds = Credentials::new(&quot;smtp_username&quot;.to_string(), &quot;smtp_password&quot;.to_string());
+
+// Open a remote connection to gmail
+let mailer = SmtpTransport::relay(&quot;smtp.gmail.com&quot;)
+  .unwrap()
+  .credentials(creds)
+  .build();
+</code></pre><p>の部分です。</p>
+<p>初めに <code>smtp_username</code>, <code>smtp_password</code> にそれぞれ独自ドメインを使用したメールアドレス、そのメールアドレス作成時のパスワードを設定します。<br>
+ここでは、例としてメールアドレスが、 <code>dummy@exmaple_domain.com</code> でパスワードが、 <code>dummy_password</code> であるものとします。</p>
+<p>続いて、 <code>mailer</code> の接続情報ですが、ここに初期ドメインを設定します。アカウント情報から見れます。<br>
+例として、 <code>example.initial.domain.com</code> としておきます。</p>
+<p><span style="color: red"> git等にあげる際には、ドメイン情報やパスワード等を流出しないように気をつけてください。</span></p>
+<p>したがって、ソースコードは次のようになります。</p>
+<pre tabindex="0"><code class="language-rustic" data-lang="rustic">let creds = Credentials::new(&quot;dummy@example_domain.com&quot;.to_string(), &quot;dummy_password&quot;.to_string());
+
+// Open a remote connection
+let mailer = SmtpTransport::relay(&quot;example.initial.domain.com&quot;)
+  .unwrap()
+  .credentials(creds)
+  .build();
+</code></pre><p>しかし、このままではさくらのメールボックスを使った送信はできません。</p>
+<p>さくらのメールボックスではメールの暗号化通信に <code>STARTTLS</code> を使用します。<br>
+したがって、mailer 部分を次のように改変します。</p>
+<pre tabindex="0"><code class="language-rustic" data-lang="rustic">// Open a remote connection using STARTTLS
+let mailer = SmtpTransport::starttls_relay(&quot;exmaple.initial.domain.com&quot;)
+  .unwrap()
+  .credentials(creds)
+  .build();
+</code></pre><p>これにより lettre を経由して独自ドメインからメールの送信ができるようになりました。</p>
+<p><span style="color: red"> git等にあげる際には、ドメイン情報やパスワード等を流出しないように気をつけてください。</span></p>
+<h2 id="参考リンク">参考リンク</h2>
+<ul>
+<li><a href="https://github.com/lettre/lettre">lettre github</a></li>
+<li><a href="https://midorimici.com/posts/dokuji-domain-mail-sakura-netlify/">みどりみちのブログ</a></li>
+<li><a href="https://www.sakura.ne.jp/mail/">さくらのメールボックス</a></li>
+<li><a href="https://help.sakura.ad.jp/360000237321/#03">さくらのレンタルサーバ（ドメインの設定）</a></li>
+<li><a href="https://help.sakura.ad.jp/360000225362/#02">さくらのレンタルサーバ（メールアドレスの作成）</a></li>
+</ul>
 
     </div>
   </div>

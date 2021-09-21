@@ -11,7 +11,7 @@ description = "Codeforces #713 E"
 
 ## Problem Overview {#problem-overview}
 
--   Consider the permutation 1 to \\(n\\) called P.
+-   Consider the permutation 1 to \\(n\\) called \\(P\\).
 -   The parameters \\(l, r, s\\) that satisfies \\(1 \leq l \leq r \leq n\\) and \\(1 \leq s \leq \frac{n(n + 1)}{2}\\) are given.
 -   Find the permutation which satisfies \\(P\_{l} + P\_{l + 1} + ... + P\_{r} = s\\).
 -   Print any permutation of length \\(n\\) that fits the condition above if such a permutation exists; otherwise, -1.

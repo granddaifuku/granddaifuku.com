@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Yudai Fukushima&#39;s webpage</title>
-    <link>https://granddaifuku.com/ja/</link>
-    <description>Recent content on Yudai Fukushima&#39;s webpage</description>
+    <title>Rust on Yudai Fukushima&#39;s webpage</title>
+    <link>https://granddaifuku.com/ja/categories/rust/</link>
+    <description>Recent content in Rust on Yudai Fukushima&#39;s webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://granddaifuku.com/ja/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://granddaifuku.com/ja/categories/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rust(lettre)とさくらのメールボックスでメール送信</title>
       <link>https://granddaifuku.com/ja/blog/2021/06/rust-lettre-sakura-mailbox/</link>
@@ -32,17 +32,6 @@
 Rust 内から lettre を使って独自ドメインからメールを送信しましょう。
 まず、公式のサンプルを見てみます。
 use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, SmtpTransport, Transport}; let email = Message::builder() .from(&amp;quot;NoBody &amp;lt;nobody@domain.</description>
-    </item>
-    
-    <item>
-      <title>Codeforces #713(Div.3) &lt;br&gt; E: Permutation by Sum</title>
-      <link>https://granddaifuku.com/ja/blog/2021/05/cf-713-div3-e/</link>
-      <pubDate>Fri, 07 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://granddaifuku.com/ja/blog/2021/05/cf-713-div3-e/</guid>
-      <description>問題概要  1 から \(n\) までの順列 \(P\) を考える \(1 \leq l \leq r \leq n\) の \(l, r\), \(1 \leq s \leq \frac{n(n + 1)}{2}\) の \(s\) が与えられる \(P_{l} + P_{l + 1} + &amp;hellip; + P_{r} = s\) となる 1 から \(n\) までの順列が存在するならばそれを出力、存在しないならば -1 を出力する  解説 1 から \(n\) までの順列の中で長さ \(r - l + 1\) で生成できる最小値、最大値を考える。
-以下、\(k = r - l + 1\) として扱う。
-最小値 初項 1、 項数 \(m\) 、公差 1 の等差数列としてみると、</description>
     </item>
     
   </channel>

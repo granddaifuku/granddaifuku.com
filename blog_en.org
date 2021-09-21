@@ -20,7 +20,7 @@
    :END:
  
 *** Problem Overview
-	- Consider the permutation 1 to $n$ called P.
+	- Consider the permutation 1 to $n$ called $P$.
 	- The parameters $l, r, s$ that satisfies $1 \leq l \leq r \leq n$ and $1 \leq s \leq \frac{n(n + 1)}{2}$ are given.
 	- Find the permutation which satisfies $P_{l} + P_{l + 1} + ... + P_{r} = s$.
 	- Print any permutation of length $n$ that fits the condition above if such a permutation exists; otherwise, -1.
@@ -51,3 +51,50 @@
 	The remaining part of the implementation is to insert the unused numbers into the empty parts of the vector.
 
 	[[https://codeforces.com/contest/1512/submission/115426822][Source Code]]
+** DONE TopCoder SRM 676 Div.1 Easy: Water Tank :@TopCoder:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: tc-676-div1-250
+   :EXPORT_DATE: 2021-09-21
+   :EXPORT_HUGO_LASTMOD: 2021-09-21
+   :EXPORT_HUGO_SECTION*: 2021/09
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail "images/topcoder.png"
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :description "TopCoder SRM 676 Div.1 Easy"
+   :END:
+   
+*** Overview
+	- You are given an empty water tank with a capacity of $C$ liters.
+	- Into this tank, the water flows $x[i]$ liters for $t[i]$ seconds. ($i = 0$ to $n - 1$)
+	- You can set the value of output pipe to any maximum output rate $R$ (not negative value, but do not have to be an integer) in liters per second.
+	- Determine the most little output rate limit $R$ such that the amount of water in the tank will never exceed $C$ liters.
+	  
+*** Explanation
+	- When it comes to "Find the maximum of the minimum," we can use *Binary Search*.
+	- The returning value can be double, so we apply binary search until the difference between the left and the right value becomes less than the acceptable error.
+
+*** Code
+	#+BEGIN_SRC C++
+	  const double EPS = 1e-9;
+	  const Inf = 1e9;
+	  double minOutputRate(vector<int> t, vector<int> x, int C) {
+		int n = (int)t.size();
+		double left = -EPS, right = Inf, mid;
+		while (right - left > EPS) {
+		  mid = (right + left) / 2;
+		  double rem = 0.0;
+		  bool ok = true;
+		  for(int i = 0; i < n; i++) {
+			rem += (x[i] - mid) * t[i];
+			rem = max(rem, (double)0);
+			if (rem > C) {
+			  ok = false;
+			  break;
+			}
+		  }
+		  if (ok)
+			right = mid;
+		  else
+			left = mid;
+		}
+		return right;
+	  }
+	#+END_SRC

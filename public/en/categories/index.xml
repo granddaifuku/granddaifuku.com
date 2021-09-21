@@ -6,11 +6,20 @@
     <description>Recent content in Categories on Yudai Fukushima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 May 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://granddaifuku.com/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://granddaifuku.com/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TopCoder</title>
+      <link>https://granddaifuku.com/en/categories/topcoder/</link>
+      <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://granddaifuku.com/en/categories/topcoder/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Codeforces</title>
       <link>https://granddaifuku.com/en/categories/codeforces/</link>
-      <pubDate>Sun, 09 May 2021 00:00:00 +0900</pubDate>
+      <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://granddaifuku.com/en/categories/codeforces/</guid>
       <description></description>
