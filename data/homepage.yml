@@ -2,7 +2,7 @@ banner:
   title: Hello! I'm Yudai.
 
 social:
-  twitter: dprocongrand
+  twitter: granddaifuku
   linkedin: yudai-fukushima-b89b0519b
   github: granddaifuku
   gitlab: ""
@@ -25,6 +25,9 @@ skill:
       description: Details coming soon, contact me if you want to know more
     - title: Python
       logo: /logos/python.svg
+      description: Details coming soon, contact me if you want to know more
+    - title: Golang
+      logo: /logos/golang.svg
       description: Details coming soon, contact me if you want to know more
     - title: Rust
       logo: /logos/rust.svg

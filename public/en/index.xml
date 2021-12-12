@@ -6,7 +6,16 @@
     <description>Recent content on Yudai Fukushima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://granddaifuku.com/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://granddaifuku.com/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Note on Anonymous Protocol for Publish-Subscribe IoT Systems</title>
+      <link>https://granddaifuku.com/en/publications/iot_anonymous/</link>
+      <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://granddaifuku.com/en/publications/iot_anonymous/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>TopCoder SRM 676 Div.1 Easy: Water Tank</title>
       <link>https://granddaifuku.com/en/blog/2021/09/tc-676-div1-250/</link>

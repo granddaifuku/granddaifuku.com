@@ -2,6 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://granddaifuku.com/ja/publications/</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://granddaifuku.com/en/publications/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://granddaifuku.com/ja/publications/"
+                />
+  </url><url>
+    <loc>https://granddaifuku.com/ja/</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://granddaifuku.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://granddaifuku.com/ja/"
+                />
+  </url><url>
+    <loc>https://granddaifuku.com/ja/publications/iot_anonymous/</loc>
+    <lastmod>2021-10-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://granddaifuku.com/en/publications/iot_anonymous/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://granddaifuku.com/ja/publications/iot_anonymous/"
+                />
+  </url><url>
     <loc>https://granddaifuku.com/ja/blog/</loc>
     <lastmod>2021-06-01T15:08:53+09:00</lastmod>
     <xhtml:link
@@ -33,19 +72,6 @@
   </url><url>
     <loc>https://granddaifuku.com/ja/blog/2021/06/rust-lettre-sakura-mailbox/</loc>
     <lastmod>2021-06-01T15:08:53+09:00</lastmod>
-  </url><url>
-    <loc>https://granddaifuku.com/ja/</loc>
-    <lastmod>2021-06-01T15:08:53+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://granddaifuku.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://granddaifuku.com/ja/"
-                />
   </url><url>
     <loc>https://granddaifuku.com/ja/contact/</loc>
     <lastmod>2021-05-08T21:06:13+09:00</lastmod>
