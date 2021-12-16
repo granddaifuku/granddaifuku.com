@@ -1,0 +1,53 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: radiko Co.,Ltd
+    url: "https://radiko.jp/"
+    location: Tokyo
+    # company overview
+    overview: radiko Co.,Ltd is a widely recognized company for internet radio development. It offers the service "radiko".
+  positions:
+  - designation: Part-time Software Engineer
+    start: Aug 2021
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Design and improve APIs
+    - Migrate services from perl to Golang
+    - Solve the existing problems
+
+- company:
+    name: Future Corporation
+    url: "https://www.future.co.jp/"
+    location: Tokyo
+    overview: Future Group has developed technology-based businesses in two main areas “IT consulting and services” and “business innovation.”
+  positions:
+  - designation: Part-time Software Engineer
+    start: June 2020
+    end: Aug 2020
+    responsibilities:
+    - Develop the web applications
+    - Develop the internal tools for cloud.
+
+- company:
+    name: teamLab Inc.
+    url: "https://www.team-lab.com/"
+    location: Tokyo
+    overview: While blurring the boundaries between science, technology, design, art, etc., teamLab Inc. provides solutions to things by creating things or through the process of creating things under the theme of "experimentation and innovation."
+  positions:
+  - designatin: Software Engineer Internship
+    start: Aug 19, 2019
+    end: Aug 30, 2019
+    responsibilities:
+    - Build a web application

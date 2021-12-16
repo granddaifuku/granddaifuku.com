@@ -1,5 +1,5 @@
 #+hugo_base_dir: .
-#+hugo_section: /ja/blog
+#+hugo_section: /posts
 #+author: Yudai Fukushima
 #+hugo_auto_set_lastmod: t
 #+OPTIONS: \n:t
@@ -12,18 +12,32 @@
   
 ** DONE Codeforces #713(Div.3) <br> E: Permutation by Sum :@Codeforces:
    :PROPERTIES:
-   :EXPORT_FILE_NAME: cf-713-div3-e
+   :EXPORT_HUGO_FRONT_MATTER_FORMAT: yaml
+   :EXPORT_FILE_NAME: cf-713-div3-e.jp.md
    :EXPORT_DATE: 2021-05-07
    :EXPORT_HUGO_LASTMOD: 2021-05-07
-   :EXPORT_HUGO_SECTION*: 2021/05
+   :EXPORT_HUGO_SECTION*: Competitive
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail "images/cf.png"
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :description "Codeforces #713 E 解説"
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :math true
    :END:
+   #+BEGIN_SRC yaml :front_matter_extra t
+menu:
+  sidebar:
+    name: Codeforces 713 E
+    identifier: cf-713-e-jp
+    parent: competitive-jp
+    weight: 10
+author:
+  name: Yudai Fukushima
+  image: /images/cf.png
+	#+END_SRC
    
 *** 問題概要
 	- 1 から $n$ までの順列 $P$ を考える
 	- $1 \leq l \leq r \leq n$ の $l, r$, $1 \leq s \leq \frac{n(n + 1)}{2}$ の $s$ が与えられる
 	- $P_{l} + P_{l + 1} + ... + P_{r} = s$ となる 1 から $n$ までの順列が存在するならばそれを出力、存在しないならば -1 を出力する
+	  
 *** 解説
 	1 から $n$ までの順列の中で長さ $r - l + 1$ で生成できる最小値、最大値を考える。  
 	以下、$k = r - l + 1$ として扱う。
@@ -57,13 +71,23 @@
 	[[https://codeforces.com/contest/1512/submission/115426822][提出したソースコード]]
 ** DONE Rust(lettre)とさくらのメールボックスでメール送信              :@Rust:
    :PROPERTIES:
-   :EXPORT_FILE_NAME: rust-lettre-sakura-mailbox
+   :EXPORT_HUGO_FRONT_MATTER_FORMAT: yaml
+   :EXPORT_FILE_NAME: rust-lettre-sakura-mailbox.jp.md
    :EXPORT_DATE: 2021-06-01
    :EXPORT_HUGO_LASTMOD: 2021-06-01
-   :EXPORT_HUGO_SECTION*: 2021/06
+   :EXPORT_HUGO_SECTION*: Development
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail "logos/rust.svg"
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :description "Rust lettre & さくらメールボックス"
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :math true
    :END:
+   #+BEGIN_SRC yaml :front_matter_extra t
+    menu:
+     sidebar:
+       name: Rust lettre
+       identifier: rust-lettre
+       parent: develop-jp
+       weight: 10
+	#+END_SRC
  
 *** はじめに
 	Rust の lettre クレートでさくらのメールボックスを用いて独自ドメインでのメールを送信する際の記録です。
@@ -74,7 +98,7 @@
 	  
 	  独自ドメインのメールアドレスでメールの送信がしたいが、ネームサーバは変更したくないというような状態です。
 	
-*** [[https://github.com/lettre/lettre][lettre]] とは
+*** [[https://github.com/lettre/lettre][lettre]]
 	Rust のメーラライブラリで、
 	- SMTP(Simple Mail Transfer Protocol)を用いてセキュアなメールの送信ができる
 	- ファイルの送信

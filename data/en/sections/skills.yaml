@@ -1,0 +1,45 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Git
+  logo: "/images/logos/git.png"
+  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
+  url: "https://git-scm.com/"
+
+- name: Go
+  logo: "/images/logos/golang.svg"
+  summary: "Using Go as the main language for professional development. Capable of writing scalable, testable, and maintainable program."
+  url: "https://go.dev/"
+
+- name: Python
+  logo: "/images/logos/python.svg"
+  summary: "Using Python as one of the main languages for professional development. Capable of writing scalable, testable, and maintainable program."
+  url: "https://www.python.org/"
+
+- name: Rust
+  logo: "/images/logos/rust.svg"
+  summary: "Using Rust as one of the main language for personal development. Capable of writing scalable, testable, and maintainable program."
+  url: "https://www.rust-lang.org/"
+
+- name: C++
+  logo: "/images/logos/cpp.svg"
+  summary: "Using C++ as the main language of competitive programming."
+
+- name: Cloud Computing
+  logo: "/images/logos/cloud.png"
+  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+
+- name: Docker
+  logo: /images/logos/docker.svg
+  summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
+  url: "https://www.docker.com/"

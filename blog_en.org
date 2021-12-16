@@ -1,8 +1,9 @@
 #+hugo_base_dir: .
-#+hugo_section: /en/blog
+#+hugo_section: /posts
 #+author: Yudai Fukushima
 #+hugo_auto_set_lastmod: t
 #+OPTIONS: \n:t
+
 
 * Blog Ideas
   :PROPERTIES:
@@ -11,20 +12,29 @@
   
 ** DONE Codeforces #713(Div.3) <br> E: Permutation by Sum       :@Codeforces:
    :PROPERTIES:
+   :EXPORT_HUGO_FRONT_MATTER_FORMAT: yaml
    :EXPORT_FILE_NAME: cf-713-div3-e
    :EXPORT_DATE: 2021-05-09
    :EXPORT_HUGO_LASTMOD: 2021-05-09
-   :EXPORT_HUGO_SECTION*: 2021/05
+   :EXPORT_HUGO_SECTION*: Competitive
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail "images/cf.png"
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :description "Codeforces #713 E"
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :math true
    :END:
+   #+BEGIN_SRC yaml :front_matter_extra t
+    menu:
+     sidebar:
+       name: Codeforces 713 E
+       identifier: cf-713-e
+       parent: competitive
+       weight: 10
+	#+END_SRC
  
 *** Problem Overview
 	- Consider the permutation 1 to $n$ called $P$.
 	- The parameters $l, r, s$ that satisfies $1 \leq l \leq r \leq n$ and $1 \leq s \leq \frac{n(n + 1)}{2}$ are given.
 	- Find the permutation which satisfies $P_{l} + P_{l + 1} + ... + P_{r} = s$.
 	- Print any permutation of length $n$ that fits the condition above if such a permutation exists; otherwise, -1.
-
 	  
 *** Problem Explanation
 	First, consider the minimum and the maximum value we can generate with the length $r - l + 1$.  
@@ -53,13 +63,22 @@
 	[[https://codeforces.com/contest/1512/submission/115426822][Source Code]]
 ** DONE TopCoder SRM 676 Div.1 Easy: Water Tank :@TopCoder:
    :PROPERTIES:
+   :EXPORT_HUGO_FRONT_MATTER_FORMAT: yaml
    :EXPORT_FILE_NAME: tc-676-div1-250
    :EXPORT_DATE: 2021-09-21
    :EXPORT_HUGO_LASTMOD: 2021-09-21
-   :EXPORT_HUGO_SECTION*: 2021/09
-   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail "images/topcoder.png"
+   :EXPORT_HUGO_SECTION*: Competitive
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :description "TopCoder SRM 676 Div.1 Easy"
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :math true
    :END:
+   #+BEGIN_SRC yaml :front_matter_extra t
+    menu:
+     sidebar:
+       name: TopCoder 676 Div1 250
+       identifier: tc-676-div1-250
+       parent: competitive
+       weight: 10
+	#+END_SRC
    
 *** Overview
 	- You are given an empty water tank with a capacity of $C$ liters.
