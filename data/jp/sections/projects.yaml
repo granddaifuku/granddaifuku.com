@@ -1,6 +1,6 @@
 # section information
 section:
-  name: 作品
+  name: プロジェクト
   id: projects
   enable: true
   weight: 4
@@ -22,7 +22,7 @@ buttons:
 # your projects
 projects:
 - name: Contest-Line-Bot
-  logo: /images/cf.png
+  logo: /images/sections/projects/line.png
   role: Developer
   timeline: "2020年1月 - 現在"
   repo: https://github.com/granddaifuku/Contests-Line-Bot
@@ -30,33 +30,33 @@ projects:
   tags: ["hobby", "go"]
 
 - name: Rustlings Solutions
-  logo: /images/cf.png
+  logo: /images/sections/projects/rust.svg
   role: Developer
-  timeline: "2020年9月 - Present"
+  timeline: "2020年9月 - 現在"
   repo: https://github.com/granddaifuku/rustlings-solutions
   summary: Rustlingsの解答集
   tags: ["hobby", "rust"]
 
 - name: 9cc
-  logo: /images/cf.png
+  logo: /images/sections/projects/c.svg
   role: Developer
-  timeline: "2021年7月 - Present"
+  timeline: "2021年7月 - 現在"
   repo: https://github.com/granddaifuku/9cc
   summary: Cで書かれたCコンパイラ
   tags: ["hobby"]
 
 - name: Competitive Programming Library
-  logo: /images/cf.png
+  logo: /images/sections/projects/cpp.svg
   role: Developper
-  timeline: "2020年6月 - Present"
+  timeline: "2020年6月 - 現在"
   repo: https://github.com/granddaifuku/library
   summary: 競プロのライブラリ
   tags: ["hobby","competitive programming"]
 
 - name: Mini-Mini-Pascal
-  logo: /images/cf.png
+  logo: /images/sections/projects/pascal.jpg
   role: Developer
-  timeline: "Oct 2021 - Present"
+  timeline: "Oct 2021 - 現在"
   repo: https://github.com/granddaifuku/Mini-Mini-Pascal
   summary: Littel Pascal compiler.
   tags: ["academic"]

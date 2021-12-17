@@ -22,7 +22,7 @@ buttons:
 # your projects
 projects:
 - name: Contest-Line-Bot
-  logo: /images/cf.png
+  logo: /images/sections/projects/line.png
   role: Developer
   timeline: "Jan 2020 - Present"
   repo: https://github.com/granddaifuku/Contests-Line-Bot
@@ -30,7 +30,7 @@ projects:
   tags: ["hobby", "go"]
   
 - name: Rustlings Solutions
-  logo: /images/cf.png
+  logo: /images/sections/projects/rust.svg
   role: Developer
   timeline: "Sep 2021 - Present"
   repo: https://github.com/granddaifuku/rustlings-solutions
@@ -38,7 +38,7 @@ projects:
   tags: ["hobby", "rust"]
 
 - name: 9cc
-  logo: /images/cf.png
+  logo: /images/sections/projects/c.svg
   role: Developer
   timeline: "Jul 2021 - Present"
   repo: https://github.com/granddaifuku/9cc
@@ -46,7 +46,7 @@ projects:
   tags: ["hobby"]
 
 - name: Competitive Programming Library
-  logo: /images/cf.png
+  logo: /images/sections/projects/cpp.svg
   role: Developper
   timeline: "Jun 2020 - Present"
   repo: https://github.com/granddaifuku/library
@@ -54,7 +54,7 @@ projects:
   tags: ["hobby","competitive programming"]
 
 - name: Mini-Mini-Pascal
-  logo: /images/cf.png
+  logo: /images/sections/projects/pascal.jpg
   role: Developer
   timeline: "Oct 2021 - Present"
   repo: https://github.com/granddaifuku/Mini-Mini-Pascal
