@@ -1,7 +1,7 @@
 ---
 title: "Rust(lettre)とさくらのメールボックスでメール送信"
-date: 2021-06-01
-lastmod: 2021-06-01
+date: 2021-12-18
+lastmod: 2021-12-18
 categories: ["Rust"]
 draft: false
 description: "Rust lettre & さくらメールボックス"
@@ -58,7 +58,7 @@ Rust 内から lettre を使って独自ドメインからメールを送信し�
 
 まず、公式のサンプルを見てみます。  
 
-```rustic
+```rust
 use lettre::transport::smtp::authentication::Credentials;
 use lettre::{Message, SmtpTransport, Transport};
 
@@ -86,7 +86,7 @@ match mailer.send(&email) {
 
 ここで必要になるものが  
 
-```rustic
+```rust
 let creds = Credentials::new("smtp_username".to_string(), "smtp_password".to_string());
 
 // Open a remote connection to gmail
@@ -108,7 +108,7 @@ let mailer = SmtpTransport::relay("smtp.gmail.com")
 
 したがって、ソースコードは次のようになります。  
 
-```rustic
+```rust
 let creds = Credentials::new("dummy@example_domain.com".to_string(), "dummy_password".to_string());
 
 // Open a remote connection
@@ -123,7 +123,7 @@ let mailer = SmtpTransport::relay("example.initial.domain.com")
 さくらのメールボックスではメールの暗号化通信に `STARTTLS` を使用します。  
 したがって、mailer 部分を次のように改変します。  
 
-```rustic
+```rust
 // Open a remote connection using STARTTLS
 let mailer = SmtpTransport::starttls_relay("exmaple.initial.domain.com")
   .unwrap()
