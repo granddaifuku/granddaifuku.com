@@ -11,19 +11,19 @@ section:
 # Your experiences
 experiences:
 - company:
-    name: 株式会社radiko
-    url: "https://radiko.jp/"
+    name: 契約上会社名を表示できません。
+    #name: 株式会社radiko
+#    url: "https://radiko.jp/"
     location: 東京
-    # company overview
-    overview: 株式会社radikoはインターネットラジオサービス radiko を提供する企業である。
+ #   overview: 株式会社radikoはインターネットラジオサービス radiko を提供する企業である。
   positions:
   - designation: ソフトウェアエンジニアアルバイト
     start: 2021年8月
     end: 現在
     responsibilities:
-    - radikoの番組表を使いやすくするための改善作業
-    - 既存環境（perl、オンプレ）から新環境（golang、GCP）への移行作業
-    - radiko運用課題の解決のサポート
+    # - radikoの番組表を使いやすくするための改善作業
+    # - 既存環境（perl、オンプレ）から新環境（golang、GCP）への移行作業
+    # - radiko運用課題の解決のサポート
 
 - company:
     name: フューチャー株式会社

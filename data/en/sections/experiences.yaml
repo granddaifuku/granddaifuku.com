@@ -11,17 +11,14 @@ section:
 # Your experiences
 experiences:
 - company:
-    name: radiko Co.,Ltd
-    url: "https://radiko.jp/"
+    name: Cannnot display the company name due to the contract.
+   # name: radiko Co.,Ltd
+#    url: "https://radiko.jp/"
     location: Tokyo
-    # company overview
-    overview: radiko Co.,Ltd is a widely recognized company for internet radio development. It offers the service "radiko".
+ #   overview: radiko Co.,Ltd is a widely recognized company for internet radio development. It offers the service "radiko".
   positions:
   - designation: Part-time Software Engineer
     start: Aug 2021
-    # don't provide end date if you are currently working there. It will be replaced by "Present"
-    # end: Dec 2020
-    # give some points about what was your responsibilities at the company.
     responsibilities:
     - Design and improve APIs
     - Migrate services from perl to Golang
