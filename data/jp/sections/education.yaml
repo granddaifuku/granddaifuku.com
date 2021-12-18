@@ -1,0 +1,30 @@
+# section information
+section:
+  name: Education
+  id: education
+  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+degrees:
+- name: 工学 修士
+  icon: fa-university
+  timeframe: 2021/4 - 現在
+  institution:
+    name: 東京都立大学
+    url: "https://www.tmu.ac.jp/"
+- name: 工学 学士
+  icon: fa-graduation-cap
+  timeframe: 2017/4 - 2021/3
+  institution:
+    name: 東京都立大学
+    url: "https://www.tmu.ac.jp/"
+- name: 高校
+  icon: fa-school
+  timeframe: 2014/4 - 2017/3
+  institution:
+    name: 広尾学園高等学校
+    url: "https://www.hiroogakuen.ed.jp/"
