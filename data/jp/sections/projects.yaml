@@ -58,5 +58,5 @@ projects:
   role: Developer
   timeline: "Oct 2021 - 現在"
   repo: https://github.com/granddaifuku/Mini-Mini-Pascal
-  summary: Littel Pascal compiler.
+  summary: パスカルコンパイラ
   tags: ["academic"]

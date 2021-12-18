@@ -31,6 +31,10 @@ socialLinks:
   icon: "fab fa-twitter"
   url: "https://twitter.com/granddaifuku"
 
+- name: Blog
+  icon: "fas fa-rss"
+  url: "https://granddaifuku.hatenablog.com/"
+
 # badges:
 # - type: certification
 #   name: Applied Information Technology Engineer Examination
