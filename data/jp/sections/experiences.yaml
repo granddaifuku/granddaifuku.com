@@ -21,8 +21,10 @@ experiences:
     start: 2021年8月
     end: 現在
     responsibilities:
+    - 既存サービスを使いやすくするための改善作業
+    - 既存環境（perl、オンプレ）から新環境（golang、GCP）への移行作業
+    - 業務上の運用課題の解決
     # - radikoの番組表を使いやすくするための改善作業
-    # - 既存環境（perl、オンプレ）から新環境（golang、GCP）への移行作業
     # - radiko運用課題の解決のサポート
 
 - company:
