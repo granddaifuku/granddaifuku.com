@@ -31,6 +31,11 @@ socialLinks:
   icon: "fab fa-twitter"
   url: "https://twitter.com/granddaifuku"
 
+# badges:
+# - type: certification
+#   name: 応用情報技術者
+#   url: "https://www.jitec.ipa.go.jp/1_11seido/ap.html"
+
 # your soft skills
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
