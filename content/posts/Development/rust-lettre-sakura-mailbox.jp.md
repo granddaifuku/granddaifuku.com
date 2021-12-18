@@ -14,7 +14,7 @@ menu:
    weight: 10
 author:
   name: Yudai Fukushima
-  image: /images/logos/rust.svg
+  image: /images/posts/rust.svg
 ---
 
 ## はじめに {#はじめに}

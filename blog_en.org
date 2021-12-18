@@ -17,7 +17,7 @@
    :EXPORT_DATE: 2021-05-09
    :EXPORT_HUGO_LASTMOD: 2021-05-09
    :EXPORT_HUGO_SECTION*: Competitive
-   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail "images/cf.png"
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail "images/posts/cf.png"
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :description "Codeforces #713 E"
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :math true
    :END:
