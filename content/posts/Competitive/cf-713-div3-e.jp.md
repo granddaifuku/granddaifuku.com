@@ -14,7 +14,7 @@ menu:
     weight: 10
 author:
   name: Yudai Fukushima
-  image: /images/posts/cf.png
+  image: /images/posts/cf.webp
 ---
 
 ## 問題概要 {#問題概要}

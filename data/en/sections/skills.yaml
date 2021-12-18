@@ -22,12 +22,12 @@ skills:
   url: "https://go.dev/"
 
 - name: Python
-  logo: /images/sections/skills/python.svg
+  logo: /images/sections/skills/python.webp
   summary: "Using Python as one of the main languages for professional development. Capable of writing scalable, testable, and maintainable program."
   url: "https://www.python.org/"
 
 - name: Rust
-  logo: /images/sections/skills/rust.svg
+  logo: /images/sections/skills/rust.webp
   summary: "Using Rust as one of the main language for personal development. Capable of writing scalable, testable, and maintainable program."
   url: "https://www.rust-lang.org/"
 
@@ -36,7 +36,7 @@ skills:
   summary: "Using C++ as the main language of competitive programming."
 
 - name: Cloud Computing
-  logo: /images/sections/skills/cloud.png
+  logo: /images/sections/skills/cloud.webp
   summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
 
 - name: Docker
@@ -45,6 +45,6 @@ skills:
   url: "https://www.docker.com/"
 
 - name: Emacs
-  logo: /images/sections/skills/emacs.svg
+  logo: /images/sections/skills/emacs.webp
   summary: "My favorite editor."
   url: "https://www.gnu.org/software/emacs/"
