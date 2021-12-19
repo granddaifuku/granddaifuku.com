@@ -1,5 +1,5 @@
 ---
-title: "Codeforces #713(Div.3) <br> E: Permutation by Sum"
+title: "Codeforces #713(Div.3) E: Permutation by Sum"
 date: 2021-05-07
 lastmod: 2021-05-07
 categories: ["Codeforces"]

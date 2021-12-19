@@ -17,6 +17,8 @@ author:
   image: /images/posts/rust.webp
 ---
 
+この記事は [Rust Advent Calendar 2021 カレンダー 3](https://qiita.com/advent-calendar/2021/rust) の 20 日目の記事です。  
+
 ## はじめに {#はじめに}
 
 Rust の lettre クレートでさくらのメールボックスを用いて独自ドメインでのメールを送信する際の記録です。  
@@ -26,7 +28,7 @@ Rust の lettre クレートでさくらのメールボックスを用いて独�
 -   xdomain にて独自ドメインを取得済み
 -   Netlify DNS にネームサーバを設定してる  
     
-    独自ドメインのメールアドレスでメールの送信がしたいが、ネームサーバは変更したくないというような状態です。
+    「独自ドメインのメールアドレスでメールの送信がしたいが、ネームサーバは変更したくない」といった状態です。
 
 
 ## [lettre](https://github.com/lettre/lettre) {#lettre}
@@ -41,14 +43,14 @@ Rust のメーラライブラリで、
     などなど欲しい機能が一通り揃っています。
 
 
-## さくらのメールボックスとは {#さくらのメールボックスとは}
+## [さくらのメールボックス](https://rs.sakura.ad.jp/mail/) {#さくらのメールボックス}
 
 かの有名なさくらインターネットさんが用意されているプランの一つで、  
 
 -   独自ドメインのメールが使える
 -   月額 87円（安すぎでは？）  
     
-    と主に月額にひかれて使い始めました。
+    と私は主に月額にひかれて使い始めました。
 
 
 ## やりたいこと {#やりたいこと}
@@ -104,7 +106,7 @@ let mailer = SmtpTransport::relay("smtp.gmail.com")
 続いて、 `mailer` の接続情報ですが、ここに初期ドメインを設定します。アカウント情報から見れます。  
 例として、 `example.initial.domain.com` としておきます。  
 
-<span style="color: red"> git等にあげる際には、ドメイン情報やパスワード等を流出しないように気をつけてください。</span>  
+<span style="color: red"> git等を使用する際には、ドメイン情報やパスワード等を流出しないように気をつけてください。</span>  
 
 したがって、ソースコードは次のようになります。  
 
@@ -133,7 +135,7 @@ let mailer = SmtpTransport::starttls_relay("exmaple.initial.domain.com")
 
 これにより lettre を経由して独自ドメインからメールの送信ができるようになりました。  
 
-<span style="color: red"> git等にあげる際には、ドメイン情報やパスワード等を流出しないように気をつけてください。</span>  
+<span style="color: red"> git等を使用する際には、ドメイン情報やパスワード等を流出しないように気をつけてください。</span>  
 
 
 ## 参考リンク {#参考リンク}
