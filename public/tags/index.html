@@ -1,268 +1,350 @@
 <!DOCTYPE html>
-<style>
-    html {
-        height: 100vh;
-    }
-    body {
-        min-height: 100vh;
-        display: grid;
-        grid-template-rows: 1fr auto;
-    }
-    .footer {
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-</style>
-<html lang="en-US"><head>
-  <meta charset="utf-8">
-  <title>Yudai Fukushima</title>
+<html>
+  <head>
+    <title>Tags</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description" property="og:description" content="The website of Yudai Fukushima, 1st Year Computer Science graduage student at Tokyo Metropolitan University">
-  <meta name="image" property="og:image" content="/">
-  <meta name="author" content="Yudai Fukushima">
-  <meta name="generator" content="Hugo 0.83.1" />
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
 
-  <!-- plugins -->
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<meta property="og:title" content="Tags" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://granddaifuku.com/tags/" />
+
+
+
+    
+    
+    <link rel="stylesheet" href="/css/layouts/list.css">
+    <link rel="stylesheet" href="/css/navigators/sidebar.css">
+    
+    <link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
   
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+
+
+
+
+
+  
+  
+    
+  
   
 
-  <!-- Main Stylesheet -->
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/site/daifuku_hud3c0ef16b7648fb473761eb1b795074c_7346_42x0_resize_q75_h2_box_2.webp" alt="Logo">
+      Yudai Fukushima&#39;s webpage</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+        
+
   
-  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
-  
-  <link rel="stylesheet" href="/css/syntax.min.css" integrity="" media="screen">
 
-  <link rel="alternate" type="application/rss+xml" href="http://granddaifuku.com/tags/index.xml" title="Yudai Fukushima" />
-<script src="https://cdn.jsdelivr.net/npm/mailgo@0.9.14/dist/mailgo.min.js" defer></script>
 
-  <!--Favicon-->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-</head>
-<body class="tags">
-    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
-        <div class="uk-navbar-right">
-            <ul class="uk-navbar-nav uk-visible@s">
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/"> Home
-                        </a></li>
-
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/publications">Publications</a></li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/portfolio">Portfolio</a></li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/youtube">YouTube</a></li>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
-                
-                
-            </ul>
-
-            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
-
-        </div>
-    </nav>
-</div>
-
-<div id="sidenav" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-
-        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-            
-            <li><a style="font-size: 18px" href="http://granddaifuku.com/"> Home </a></li>
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a style="font-size: 18px" href="/about">About</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a style="font-size: 18px" href="/publications">Publications</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a style="font-size: 18px" href="/blog">Blog</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a style="font-size: 18px" href="/youtube">YouTube</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a style="font-size: 18px" href="/contact">Contact</a></li>
-            
-            
-        </ul>
-
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      
+      <span class="flag-icon flag-icon-us"></span>
+      English
+    </a>
+    <div class="dropdown-menu" aria-labelledby="languageSelector">
+      
+        <a class="dropdown-item nav-link languages-item" href="/jp/tags">
+          
+          <span class="flag-icon flag-icon-jp"></span>
+          日本語
+        </a>
+      
     </div>
-</div>
+</li>
 
-
-
-
-
-<section class="uk-margin-large-bottom">
-        <h1 class="uk-heading-large uk-text-center">Tags</h1>
-</section>
-
-
-
-<section class="uk-margin-large-bottom">
-    <div class="uk-container">
-        <div class="uk-grid-small uk-child-width-1-4@s uk-text-center" uk-grid uk-height-match="target: > div > div > .card-body">
-            
-
-        </div>
-
+      
+      </ul>
     </div>
-</section>
-
-
-    </div>
-<footer class="footer">
-  <div class="uk-container">
-
-
-    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
-      <div class="uk-margin-small-bottom">
-        <h5 class="uk-margin-small-bottom">Email</h5>
-        <a href="mailto:grandnadaifuku@gmail.com">grandnadaifuku@gmail.com</a>
-
-      </div>
-      <div>
-        <h5 class="uk-margin-small-bottom">Address</h5>
-                  <div uk-lightbox>
-                    <a href="https://www.google.co.jp/maps/place/%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%9D%B1%E4%BA%AC/@35.6681625,139.6007831,11z/data=!3m1!4b1!4m5!3m4!1s0x60188b857628235d:0xcdd8aef709a2b520!8m2!3d35.6803997!4d139.7690174?hl=ja" data-caption="Tokyo, Japan"
-                      data-type="iframe">Tokyo, Japan</a>
-      </div>
-      </div>
-
-    </div>
-
-
-
-
-
-  <div class="footer-copyright uk-text-center" style="padding-bottom: 1rem">
-    <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1.2em;
-  width: 1.2em;" alt="Creative Commons">
-    <img loading="lazy" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1.2em;
-  width: 1.2em;" alt="CC-BY">
-    2020
-    Yudai Fukushima
-
-
   </div>
-</footer>
+  
+  
+    <img src="/images/site/daifuku_hud3c0ef16b7648fb473761eb1b795074c_7346_42x0_resize_q75_h2_box_2.webp" class="d-none" id="main-logo" alt="Logo">
+  
+  
+</nav>
 
 
-<!-- JS Plugins -->
 
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+      
+      
+  
+  
+    
+  
 
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/tags" data-filter="all">Tags</a></li>
+            <div class="subtree taxonomy-terms">
+              
+              
 
-</body>
+
+
+  
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content container-fluid" id="content">
+    <div class="container-fluid post-card-holder" id="post-card-holder">
+      
+      
+      
+    </div>
+    <div class="paginator">
+      
+    </div>
+  </div>
+</section>
+
+
+      
+       
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://granddaifuku.com/#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://granddaifuku.com/#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://granddaifuku.com/#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://granddaifuku.com/#education">Education</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://granddaifuku.com/#projects">Projects</a>
+                </li>
+              
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://granddaifuku.com/#recent-posts">Recent Posts</a>
+                </li>
+              
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:grandnadaifuku@example.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>grandnadaifuku@example.com</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2021 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.0/cjs/enums.min.js" integrity="sha512-FqKK0WP6soxMaoQifJmiRlWPJxUrjit1mYKnm1jGoEq6S5fE1BrujLw6LHt+mPA/wxvcfsgOun6OYMwF8/b8ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+    
+    
+    <script src="/js/list.js"></script>
+
+  </body>
 </html>
