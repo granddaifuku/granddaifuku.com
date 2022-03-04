@@ -60,3 +60,11 @@ projects:
   repo: https://github.com/granddaifuku/Mini-Mini-Pascal
   summary: Littel Pascal compiler.
   tags: ["academic"]
+
+- name: blahbrah
+  logo: /images/sections/projects/golang.svg
+  role: Developer
+  timeline: "Mar 2021 - Present"
+  repo: https://github.com/granddaifuku/blahbrah
+  summary: Static analyzer that finds ineffectual blank lines after the left brace and before the right brace in Golang.
+  tags: ["hobby"]

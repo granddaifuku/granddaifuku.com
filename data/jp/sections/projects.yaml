@@ -56,7 +56,15 @@ projects:
 - name: Mini-Mini-Pascal
   logo: /images/sections/projects/pascal.webp
   role: Developer
-  timeline: "Oct 2021 - 現在"
+  timeline: "2021年10月 - 現在"
   repo: https://github.com/granddaifuku/Mini-Mini-Pascal
   summary: パスカルコンパイラ
   tags: ["academic"]
+
+- name: blahbrah
+  logo: /images/sections/projects/golang.svg
+  role: Developer
+  timeline: "2022年3月 - 現在"
+  repo: https://github.com/granddaifuku/blahbrah
+  summary: "Brace直前直後の空行を発見するための静的解析ツール"
+  tags: ["hobby"]
