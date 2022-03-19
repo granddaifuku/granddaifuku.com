@@ -11,6 +11,18 @@ section:
 # Your experiences
 experiences:
 - company:
+    name: 株式会社メルカリ
+    url: "https://about.mercari.com/"
+    overview: 株式会社メルカリは新たな価値を生み出す世界的なマーケットプレイスを創るというミッションのもとサービスを展開している。
+    location: 東京
+  positions:
+    - designation: Software Engineer Internship
+      start: 2022年3月14日
+      end: 2022年3月18日
+      responsibilities:
+        - Go 1.18について学ぶ
+        - Go 1.18の新機能を用いて新たなOSSを開発する
+- company:
     name: 契約上会社名を表示できません。
     #name: 株式会社radiko
 #    url: "https://radiko.jp/"
@@ -35,7 +47,7 @@ experiences:
   positions:
   - designation: ソフトウェアエンジニアアルバイト
     start: 2020年6月
-    end: 2020年8月
+    end: 2021年8月
     responsibilities:
     - アプリケーションの開発
     - クラウドに関連した社内ツールの作成

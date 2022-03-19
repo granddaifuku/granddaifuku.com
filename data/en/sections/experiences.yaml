@@ -11,6 +11,18 @@ section:
 # Your experiences
 experiences:
 - company:
+    name: Mercari, Inc.
+    url: "https://about.mercari.com/en/"
+    overview: Mercari, Inc. aims to establish a society where resources are circulated and where people can accomplish their goals.
+    location: Tokyo
+  positions:
+    - designation: Software Engineer Internship
+      start: Mar 14, 2022
+      end: Mar 18, 2022
+      responsibilities:
+        - Learn about Go 1.18
+        - Create an OSS using the new feature with Go 1.18
+- company:
     name: Cannnot display the company name due to the contract.
    # name: radiko Co.,Ltd
 #    url: "https://radiko.jp/"
