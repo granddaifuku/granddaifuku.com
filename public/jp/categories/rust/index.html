@@ -11,11 +11,17 @@
 <link rel="stylesheet" href="/css/layouts/main.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
+
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
 
 
 
@@ -24,7 +30,6 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://granddaifuku.com/jp/categories/rust/" />
-
 
 
     
@@ -37,8 +42,11 @@
 
 
     
-    
-  </head>
+
+
+
+
+</head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
     <div class="container-fluid bg-dimmed wrapper">
@@ -81,6 +89,7 @@
     <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
       
+      
       </ul>
     </div>
   </div>
@@ -104,7 +113,7 @@
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
         <form class="mx-auto" method="get" action="/jp/search">
-          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+          <input type="text" name="keyword" value="" placeholder="検索" data-search="" id="search-box" />
         </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
@@ -156,29 +165,10 @@
       </div>
       <div class="card-body">
         <h5 class="card-title">Rust(lettre)とさくらのメールボックスでメール送信</h5>
-        <p class="card-text post-summary">この記事は Rust Advent Calendar 2021 カレンダー 3 の 20 日目の記事です。
-はじめに Rust の lettre クレートでさくらのメールボックスを用いて独自ドメインでのメールを送信する際の記録です。
-前提としては、
-  xdomain にて独自ドメインを取得済み
-  Netlify DNS にネームサーバを設定してる
-「独自ドメインのメールアドレスでメールの送信がしたいが、ネームサーバは変更したくない」といった状態です。
-  lettre Rust のメーラライブラリで、
-  SMTP(Simple Mail Transfer Protocol)を用いてセキュアなメールの送信ができる
-  ファイルの送信
-  非同期サポート
-  ユニコードサポート
-などなど欲しい機能が一通り揃っています。
-  さくらのメールボックス かの有名なさくらインターネットさんが用意されているプランの一つで、
-  独自ドメインのメールが使える
-  月額 87円（安すぎでは？）
-と私は主に月額にひかれて使い始めました。
-  やりたいこと さくらのメールボックスの登録、独自ドメインの追加、メールアドレスの作成は済んでいるものとします。
-Rust 内から lettre を使って独自ドメインからメールを送信しましょう。
-まず、公式のサンプルを見てみます。
-use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, SmtpTransport, Transport}; let email = Message::builder() .</p>
+        <p class="card-text post-summary">はじめに Rust の lettre クレートでさくらのメールボックスを用いて独自ドメインでのメールを送信する際の記録です。 前提としては、 xdomain にて独自ドメインを取得済み Netlify DNS にネームサーバを設定してる 独自ドメインのメールアドレスでメールの送信がしたいが、ネームサーバは変更したくないというような状態です。 lettre Rust のメーラライブラリで、 SMTP(Simple Mail Transfer Protocol)を用いてセキュアなメールの送信ができる ファイルの送信 非同期サポート ユニコードサポート などなど欲しい機能が一通り揃っています。 さくらのメールボックスとは かの有名なさくらインターネットさんが用意されているプランの一つで、 独自ドメインのメールが使える 月額 87円（安すぎでは？） と主に月額にひかれて使い始めました。 やりたいこと さくらのメールボックスの登録、独自ドメインの追加、メールアドレスの作成は済んでいるものとします。 Rust 内から lettre を使って独自ドメインからメールを送信しましょう。 まず、公式のサンプルを見てみます。 use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, SmtpTransport, Transport}; let email = Message::builder() .from(&#34;NoBody &lt;nobody@domain.tld&gt;&#34;.parse().unwrap()) .reply_to(&#34;Yuin &lt;yuin@domain.tld&gt;&#34;.parse().unwrap()) .to(&#34;Hei &lt;hei@domain.tld&gt;&#34;.parse().unwrap()) .subject(&#34;Happy new year&#34;) .body(String::from(&#34;Be happy!&#34;)) .unwrap(); let creds = Credentials::new(&#34;smtp_username&#34;.to_string(), &#34;smtp_password&#34;.to_string()); // Open a remote connection to gmail let mailer = SmtpTransport::relay(&#34;smtp.</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">December 18, 2021</span>
+        <span class="float-left">June 1, 2021</span>
         <a
         href="/jp/posts/development/rust-lettre-sakura-mailbox/"
         class="float-right btn btn-outline-info btn-sm"
@@ -216,6 +206,7 @@ use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, 
 
 
 
+
   
   
     
@@ -224,6 +215,9 @@ use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, 
   
   
     
+  
+
+  
   
 
   
@@ -254,7 +248,7 @@ use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, 
   
   
 
-  <footer class="container-fluid text-center align-content-center footer pb-2">
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
       <div class="row text-left">
         
@@ -317,6 +311,9 @@ use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, 
                   <a class="smooth-scroll" href="https://granddaifuku.com/jp/#recent-posts">最近の投稿</a>
                 </li>
               
+            
+              
+            
           </ul>
           
         </div>
@@ -345,7 +342,7 @@ use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, 
     <div class="container">
       <div class="row text-left">
         <div class="col-md-4">
-          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
             <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
@@ -375,9 +372,12 @@ use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, 
 <script type="text/javascript" src="/js/main.js"></script>
 
 
+
     
     
     <script src="/js/list.js"></script>
 
-  </body>
+
+    
+</body>
 </html>

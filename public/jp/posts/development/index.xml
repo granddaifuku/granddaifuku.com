@@ -6,34 +6,15 @@
     <description>Recent content in Develop on Yudai Fukushima&#39;s webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://granddaifuku.com/jp/posts/development/index.xml" rel="self" type="application/rss+xml" />
-    <item>
+    <lastBuildDate>Tue, 01 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://granddaifuku.com/jp/posts/development/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Rust(lettre)とさくらのメールボックスでメール送信</title>
       <link>https://granddaifuku.com/jp/posts/development/rust-lettre-sakura-mailbox/</link>
-      <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://granddaifuku.com/jp/posts/development/rust-lettre-sakura-mailbox/</guid>
-      <description>この記事は Rust Advent Calendar 2021 カレンダー 3 の 20 日目の記事です。
-はじめに Rust の lettre クレートでさくらのメールボックスを用いて独自ドメインでのメールを送信する際の記録です。
-前提としては、
-  xdomain にて独自ドメインを取得済み
-  Netlify DNS にネームサーバを設定してる
-「独自ドメインのメールアドレスでメールの送信がしたいが、ネームサーバは変更したくない」といった状態です。
-  lettre Rust のメーラライブラリで、
-  SMTP(Simple Mail Transfer Protocol)を用いてセキュアなメールの送信ができる
-  ファイルの送信
-  非同期サポート
-  ユニコードサポート
-などなど欲しい機能が一通り揃っています。
-  さくらのメールボックス かの有名なさくらインターネットさんが用意されているプランの一つで、
-  独自ドメインのメールが使える
-  月額 87円（安すぎでは？）
-と私は主に月額にひかれて使い始めました。
-  やりたいこと さくらのメールボックスの登録、独自ドメインの追加、メールアドレスの作成は済んでいるものとします。
-Rust 内から lettre を使って独自ドメインからメールを送信しましょう。
-まず、公式のサンプルを見てみます。
-use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, SmtpTransport, Transport}; let email = Message::builder() .</description>
+      <description>はじめに Rust の lettre クレートでさくらのメールボックスを用いて独自ドメインでのメールを送信する際の記録です。 前提としては、 xdomain にて独自ドメインを取得済み Netlify DNS にネームサーバを設定してる 独自ドメインのメールアドレスでメールの送信がしたいが、ネームサーバは変更したくないというような状態です。 lettre Rust のメーラライブラリで、 SMTP(Simple Mail Transfer Protocol)を用いてセキュアなメールの送信ができる ファイルの送信 非同期サポート ユニコードサポート などなど欲しい機能が一通り揃っています。 さくらのメールボックスとは かの有名なさくらインターネットさんが用意されているプランの一つで、 独自ドメインのメールが使える 月額 87円（安すぎでは？） と主に月額にひかれて使い始めました。 やりたいこと さくらのメールボックスの登録、独自ドメインの追加、メールアドレスの作成は済んでいるものとします。 Rust 内から lettre を使って独自ドメインからメールを送信しましょう。 まず、公式のサンプルを見てみます。 use lettre::transport::smtp::authentication::Credentials; use lettre::{Message, SmtpTransport, Transport}; let email = Message::builder() .from(&amp;#34;NoBody &amp;lt;nobody@domain.tld&amp;gt;&amp;#34;.parse().unwrap()) .reply_to(&amp;#34;Yuin &amp;lt;yuin@domain.tld&amp;gt;&amp;#34;.parse().unwrap()) .to(&amp;#34;Hei &amp;lt;hei@domain.tld&amp;gt;&amp;#34;.parse().unwrap()) .subject(&amp;#34;Happy new year&amp;#34;) .body(String::from(&amp;#34;Be happy!&amp;#34;)) .unwrap(); let creds = Credentials::new(&amp;#34;smtp_username&amp;#34;.to_string(), &amp;#34;smtp_password&amp;#34;.to_string()); // Open a remote connection to gmail let mailer = SmtpTransport::relay(&amp;#34;smtp.</description>
     </item>
+    
     
   </channel>
 </rss>

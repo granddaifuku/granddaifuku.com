@@ -6,17 +6,17 @@
     <description>Recent content in Competitive on Yudai Fukushima&#39;s webpage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://granddaifuku.com/jp/posts/competitive/index.xml" rel="self" type="application/rss+xml" />
-    <item>
+    <lastBuildDate>Fri, 07 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://granddaifuku.com/jp/posts/competitive/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Codeforces #713(Div.3) E: Permutation by Sum</title>
       <link>https://granddaifuku.com/jp/posts/competitive/cf-713-div3-e/</link>
       <pubDate>Fri, 07 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://granddaifuku.com/jp/posts/competitive/cf-713-div3-e/</guid>
-      <description>問題概要  1 から \(n\) までの順列 \(P\) を考える \(1 \leq l \leq r \leq n\) の \(l, r\), \(1 \leq s \leq \frac{n(n + 1)}{2}\) の \(s\) が与えられる \(P_{l} + P_{l + 1} + &amp;hellip; + P_{r} = s\) となる 1 から \(n\) までの順列が存在するならばそれを出力、存在しないならば -1 を出力する  解説 1 から \(n\) までの順列の中で長さ \(r - l + 1\) で生成できる最小値、最大値を考える。
+      <description>問題概要 1 から \(n\) までの順列 \(P\) を考える \(1 \leq l \leq r \leq n\) の \(l, r\), \(1 \leq s \leq \frac{n(n + 1)}{2}\) の \(s\) が与えられる \(P_{l} + P_{l + 1} + &amp;hellip; + P_{r} = s\) となる 1 から \(n\) までの順列が存在するならばそれを出力、存在しないならば -1 を出力する 解説 1 から \(n\) までの順列の中で長さ \(r - l + 1\) で生成できる最小値、最大値を考える。
 以下、\(k = r - l + 1\) として扱う。
 最小値 初項 1、 項数 \(m\) 、公差 1 の等差数列としてみると、</description>
     </item>
+    
     
   </channel>
 </rss>

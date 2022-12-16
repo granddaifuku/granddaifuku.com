@@ -11,11 +11,17 @@
 <link rel="stylesheet" href="/css/layouts/main.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
+
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
 
 
 
@@ -26,7 +32,6 @@
 <meta property="og:url" content="https://granddaifuku.com/posts/competitive/tc-676-div1-250/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-09-21T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-09-21T00:00:00+00:00" />
-
 
 
     
@@ -44,8 +49,11 @@
 
 
     
-    
-  </head>
+
+
+
+
+</head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
     <div class="container-fluid bg-dimmed wrapper">
@@ -88,6 +96,7 @@
     <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
       
+      
       </ul>
     </div>
   </div>
@@ -110,7 +119,7 @@
         </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <li id="list-heading"><a href="/posts/" data-filter="all">Posts</a></li>
             <div class="subtree">
                 
   
@@ -177,7 +186,7 @@
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://granddaifuku.com/images/default-hero.jpg);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/default-hero.jpg);'>
       </div>
 
       
@@ -185,7 +194,7 @@
         <div class="author-profile ml-auto align-self-lg-center">
           <img class="rounded-circle" src='/images/posts/topcoder_hu3db4e87093578d4b895538c8875f4133_6376_120x120_fit_q75_h2_box_2.webp' alt="Author Image">
           <h5 class="author-name">Yudai Fukushima</h5>
-          <p>September 21, 2021</p>
+          <p>Tuesday, September 21, 2021</p>
         </div>
 
         <div class="title">
@@ -193,7 +202,7 @@
         </div>
         
         <div class="taxonomy-terms">
-            <ul>
+          <ul style="padding-left: 0;">
             
           </ul>
         </div>
@@ -212,31 +221,31 @@
 <li>The returning value can be double, so we apply binary search until the difference between the left and the right value becomes less than the acceptable error.</li>
 </ul>
 <h2 id="code">Code</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">double</span> EPS <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-9</span>;
-<span style="color:#66d9ef">const</span> Inf <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span>;
-<span style="color:#66d9ef">double</span> <span style="color:#a6e22e">minOutputRate</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> t, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> x, <span style="color:#66d9ef">int</span> C) {
-  <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span>)t.size();
-  <span style="color:#66d9ef">double</span> left <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>EPS, right <span style="color:#f92672">=</span> Inf, mid;
-  <span style="color:#66d9ef">while</span> (right <span style="color:#f92672">-</span> left <span style="color:#f92672">&gt;</span> EPS) {
-  mid <span style="color:#f92672">=</span> (right <span style="color:#f92672">+</span> left) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-  <span style="color:#66d9ef">double</span> rem <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>;
-  <span style="color:#66d9ef">bool</span> ok <span style="color:#f92672">=</span> true;
-  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
-	rem <span style="color:#f92672">+=</span> (x[i] <span style="color:#f92672">-</span> mid) <span style="color:#f92672">*</span> t[i];
-	rem <span style="color:#f92672">=</span> max(rem, (<span style="color:#66d9ef">double</span>)<span style="color:#ae81ff">0</span>);
-	<span style="color:#66d9ef">if</span> (rem <span style="color:#f92672">&gt;</span> C) {
-	  ok <span style="color:#f92672">=</span> false;
-	  <span style="color:#66d9ef">break</span>;
-	}
-  }
-  <span style="color:#66d9ef">if</span> (ok)
-	right <span style="color:#f92672">=</span> mid;
-  <span style="color:#66d9ef">else</span>
-	left <span style="color:#f92672">=</span> mid;
-  }
-  <span style="color:#66d9ef">return</span> right;
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">double</span> EPS <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-9</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> Inf <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span> <span style="color:#a6e22e">minOutputRate</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> t, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> x, <span style="color:#66d9ef">int</span> C) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span>)t.size();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">double</span> left <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>EPS, right <span style="color:#f92672">=</span> Inf, mid;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span> (right <span style="color:#f92672">-</span> left <span style="color:#f92672">&gt;</span> EPS) {
+</span></span><span style="display:flex;"><span>  mid <span style="color:#f92672">=</span> (right <span style="color:#f92672">+</span> left) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">double</span> rem <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bool</span> ok <span style="color:#f92672">=</span> true;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>	rem <span style="color:#f92672">+=</span> (x[i] <span style="color:#f92672">-</span> mid) <span style="color:#f92672">*</span> t[i];
+</span></span><span style="display:flex;"><span>	rem <span style="color:#f92672">=</span> max(rem, (<span style="color:#66d9ef">double</span>)<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (rem <span style="color:#f92672">&gt;</span> C) {
+</span></span><span style="display:flex;"><span>	  ok <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>	  <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (ok)
+</span></span><span style="display:flex;"><span>	right <span style="color:#f92672">=</span> mid;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>	left <span style="color:#f92672">=</span> mid;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> right;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
         </div>
 
         
@@ -356,8 +365,7 @@
 
       
       
-        
-      
+
       
       
 
@@ -405,6 +413,7 @@
 
 
 
+
   
   
     
@@ -413,6 +422,9 @@
   
   
     
+  
+
+  
   
 
   
@@ -443,7 +455,7 @@
   
   
 
-  <footer class="container-fluid text-center align-content-center footer pb-2">
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
       <div class="row text-left">
         
@@ -506,6 +518,9 @@
                   <a class="smooth-scroll" href="https://granddaifuku.com/#recent-posts">Recent Posts</a>
                 </li>
               
+            
+              
+            
           </ul>
           
         </div>
@@ -534,7 +549,7 @@
     <div class="container">
       <div class="row text-left">
         <div class="col-md-4">
-          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
             <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
@@ -564,6 +579,7 @@
 <script type="text/javascript" src="/js/main.js"></script>
 
 
+
     
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
@@ -572,13 +588,31 @@
   hljs.initHighlightingOnLoad();
 </script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);">
+
+
+    <link rel="stylesheet" href="/katex/katex.min.css">
+<script type="text/javascript" defer src="/katex/katex.min.js"></script>
+<script type="text/javascript" defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);">
+    renderMathInElement(
+        document.body,
+        {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ]
+        }
+    );
 </script>
 
 
 
-  </body>
+
+
+
+
+
+    
+</body>
 </html>

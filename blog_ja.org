@@ -75,8 +75,8 @@ author:
    :EXPORT_FILE_NAME: rust-lettre-sakura-mailbox.jp.md
    :EXPORT_DATE: 2021-06-01
    :EXPORT_HUGO_LASTMOD: 2021-06-01
+   :EXPORT_HUGO_SECTION_FRAG: Development
    :EXPORT_HUGO_SECTION*: Development
-   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :thumbnail "logos/rust.svg"
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :description "Rust lettre & さくらメールボックス"
    :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :math true
    :END:
@@ -120,7 +120,7 @@ author:
 
 	まず、公式のサンプルを見てみます。
 	
-	#+BEGIN_SRC rustic
+	#+BEGIN_SRC rust
 	  use lettre::transport::smtp::authentication::Credentials;
 	  use lettre::{Message, SmtpTransport, Transport};
 
@@ -147,7 +147,7 @@ author:
 	#+END_SRC
 
 	ここで必要になるものが
-	#+BEGIN_SRC rustic
+	#+BEGIN_SRC rust
 	  let creds = Credentials::new("smtp_username".to_string(), "smtp_password".to_string());
 
 	  // Open a remote connection to gmail
@@ -168,7 +168,7 @@ author:
 
 
 	したがって、ソースコードは次のようになります。
-	#+BEGIN_SRC rustic
+	#+BEGIN_SRC rust
 	  let creds = Credentials::new("dummy@example_domain.com".to_string(), "dummy_password".to_string());
 
 	  // Open a remote connection
@@ -182,7 +182,7 @@ author:
 	
 	さくらのメールボックスではメールの暗号化通信に ~STARTTLS~ を使用します。
 	したがって、mailer 部分を次のように改変します。
-	#+BEGIN_SRC  rustic
+	#+BEGIN_SRC  rust
 	  // Open a remote connection using STARTTLS
 	  let mailer = SmtpTransport::starttls_relay("exmaple.initial.domain.com")
 		  .unwrap()
@@ -201,3 +201,133 @@ author:
 	- [[https://www.sakura.ne.jp/mail/][さくらのメールボックス]]
 	- [[https://help.sakura.ad.jp/360000237321/#03][さくらのレンタルサーバ（ドメインの設定）]]
 	- [[https://help.sakura.ad.jp/360000225362/#02][さくらのレンタルサーバ（メールアドレスの作成）]]
+** DONE GitLens for Emacs: Blamer.el                                 :@Emacs:
+   :PROPERTIES:
+   :EXPORT_HUGO_FRONT_MATTER_FORMAT: yaml
+   :EXPORT_FILE_NAME: emacs-blamer.jp.md
+   :EXPORT_DATE: 2022-12-16
+   :EXPORT_HUGO_LASTMOD: 2022-12-17
+   :EXPORT_HUGO_SECTION_FRAG: Development 
+   :EXPORT_HUGO_SECTION*: Development
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :description "Emacs Blamer.el"
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :math true
+   :END:
+   #+BEGIN_SRC yaml :front_matter_extra t
+	 author:
+	   name: Yudai Fukushima
+	   image: /images/daifuku.webp
+	 menu:
+	  sidebar:
+		name: Emacs Blamer
+		identifier: emacs-blamer
+		parent: develop-jp
+		weight: 10
+   #+END_SRC
+   
+   この記事は [[https://qiita.com/advent-calendar/2022/emacs][Emacs Advent Calendar 2022]] 17日目の記事です。
+   
+   *** はじめに
+
+   VS Code を使ったことがある方なら誰しも一度は使用したことがあるであろうパッケージに [[https://gitlens.amod.io/][GitLens]] があります。
+   これは、簡潔に言うとカーソルのある現在行や、クラスの先頭に Git Blame の情報を表示してくれるものです。
+   以下に、VSCode での使用例を貼っておきます。
+
+   [[/files/emacs-blamer/vscode.webp]]
+   
+
+   [[https://github.com/Artawower/blamer.el][Blamer.el]] は Artawower さんによって作成された Emacs 用の Git Blame プラグインです。
+
+   #+BEGIN_QUOTE
+   A git blame plugin for emacs inspired by VS Code’s GitLens plugin and Vim plugin
+   #+END_QUOTE
+
+   とあることからもわかるように、VSCode の GitLens や Vim の [[https://github.com/APZelos/blamer.nvim][Blamer.nvim]] プラグインと似た機能を持っています。
+
+   日本語での記事が見当たらなかったため、この記事で軽く触れて行けたらと思っています。
+
+   *** 設定例
+
+   最初に自分が使用している設定例を載せておきます。
+
+   #+BEGIN_SRC emacs-lisp
+	 (use-package blamer
+	   :ensure t
+	   :custom
+	   (blamer-idle-time 0.3)
+	   (blamer-min-offset 70)
+	   (blamer-pretty-time-p t)
+	   (blamer-author-formatter "✎ %s ")
+	   (blamer-datetime-formatter "[%s] ")
+	   (blamer-commit-formatter "● %s")
+	   (blamer-type 'visual)
+	   :config
+	   (global-blamer-mode 1))
+   #+END_SRC
+   
+   実際の使用感は次のようになります。
+   
+   [[/files/emacs-blamer/current.webp]]
+
+
+   カーソルのある行のコミット情報が表示されていることがわかると思います。
+   
+   *** 説明
+
+   さらっと設定に触れていきます。
+
+   - Git Blame の情報を表示するまでにかかる秒数の設定
+	 ~(blamer-idle-time)~ にて設定することができます。
+	 
+   - 表示する際の著者・時刻・メッセージのフォーマットの設定
+
+	 #+BEGIN_SRC emacs-lisp
+	   (blamer-author-formatter "✎ %s ")    ;; 「✎ 著者名」と表示される
+	   (blamer-datetime-formatter "[%s] ")  ;; 「[コミット作成日時] 」と表示される
+	   (blamer-commit-formatter "● %s")     ;; 「● コミットメッセージ」 と表示される
+	 #+END_SRC
+
+	 コミット作成者・作成日時・コミットメッセージの表示フォーマットを設定することができます。
+	 さらに、コミット作成日時に関しては、 ~(setq blamer-pretty-time-p t)~ とすることでいい感じにしてくれます。
+
+   - コミット情報を表示するまでのオフセットの設定
+	 ~(blamer-min-offset)~ にて設定することができます。
+	 以下にオフセットを 10 に設定した場合の画像を貼っておきます。
+
+	 [[/files/emacs-blamer/offset-10.webp]]
+
+   - コミット情報の表示方法の設定
+	 ~(blamer-type)~ にて設定することができ、次の 5 パターンの表示方法があります。
+	 
+     1. ~selected~ : マークされた各行に対してのコミット情報を表示します。
+
+		[[/files/emacs-blamer/selected.webp]]
+
+	 2. ~visual~ : カーソルがある現在行のコミット情報を表示します。
+
+		[[/files/emacs-blamer/visual.webp]]
+
+	 3. ~both~ : ~selected~ と ~visual~ 両方で情報を見ることが出来ます。
+
+	 4. ~overlay-popup~ : 名前の通りです。 ~overlay-popup~ の場合は、表示位置を上下選ぶことができます。
+
+	 5. ~posframe-popup~ : 同じく名前の通りです。
+
+	 4, 5 に関しては、[[https://github.com/Artawower/blamer.el/tree/master/images][公式から画像]] が提供されています。
+		   また、 ~selected~ の場合、 ~blamer-max-lines~ で表示する最大行数を設定することもできます。
+
+   - ~blamer-show-commit-info~
+	 ~M-x blamer-show-commit-info~ でコミット情報を表示することができます。
+
+	 [[/files/emacs-blamer/show-commit-info.webp]]
+
+
+  他にも、 ~uncommitted changes~ の表示メッセージを変更できたり、コミット上にマウスを置いた際に、ツールチップを表示させたり等、もっと多くのことができます。
+
+  *** まとめ
+  Emacs 用の GitLens パッケージ Blamer.el を紹介しました。
+  メリークリスマス！
+
+  
+  *** 参考リンク
+  - [[https://github.com/Artawower/blamer.el][Artawower/blamer.el (GitHub)]]
+  - [[https://github.com/granddaifuku/.emacs.d/blob/9a74af0a088d3d051ec78d61a93bb8c5124dc270/init.el#L635][自分の設定ファイルへのリンク (GitHub)]]

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.91.2" />
+	<meta name="generator" content="Hugo 0.108.0">
     <title>Yudai Fukushima&#39;s webpage</title>
     
     
@@ -21,11 +21,17 @@
 <link rel="stylesheet" href="/css/layouts/main.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
+
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
 
 
 
@@ -52,16 +58,21 @@
     <link rel="stylesheet" href="/css/sections/recent-posts.css"/>
     <link rel="stylesheet" href="/css/sections/achievements.css"/>
     <link rel="stylesheet" href="/css/sections/accomplishments.css"/>
+    <link rel="stylesheet" href="/css/sections/publications.css"/>
 
     
     <link rel="stylesheet" href="/css/style.css"/>
     
     
-    
-  </head>
+
+
+
+
+</head>
   <body data-spy="scroll" data-target="#top-navbar" data-offset="100">
 
     
+
 
 
 
@@ -112,7 +123,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="top-nav-items">
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
           <a class="nav-link" href="#home">Home</a>
@@ -155,10 +166,6 @@
             
               
               
-                <li class="nav-item">
-                  <a class="nav-link" href="#projects">Projects</a>
-                </li>
-              
             
             
             
@@ -190,6 +197,8 @@
                   
                     
                     
+                      <a class="dropdown-item" href="#projects">Projects</a>
+                    
                   
                   
                   
@@ -207,35 +216,42 @@
         
         
           <li class="nav-item">
-            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+            <a class="nav-link" id="blog-link" href="/posts/">Posts</a>
           </li>
         
         
         
         
           <li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    
-    <span class="flag-icon flag-icon-us"></span>
-    English
-</a>
-<div class="dropdown-menu" aria-labelledby="languageSelector">
-    
-    <a class="dropdown-item nav-link languages-item" href="/">
+    <a class="nav-link dropdown-toggle" href="#" id="languageSelector" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         
-        <span class="flag-icon flag-icon-us"></span>
+            
+            <span class="flag-icon flag-icon-us"></span>
+        
         English
     </a>
-    
-    <a class="dropdown-item nav-link languages-item" href="/jp/">
+    <div class="dropdown-menu" aria-labelledby="languageSelector">
         
-        <span class="flag-icon flag-icon-jp"></span>
-        日本語
-    </a>
-    
-</div>
-</li>
+        <a class="dropdown-item nav-link languages-item" href="/">
+            
+                
+                <span class="flag-icon flag-icon-us"></span>
+            
+            English
+        </a>
+        
+        <a class="dropdown-item nav-link languages-item" href="/jp/">
+            
+                
+                <span class="flag-icon flag-icon-jp"></span>
+            
+            日本語
+        </a>
+        
+    </div>
+    </li>
 
+        
         
       </ul>
     </div>
@@ -309,28 +325,27 @@
   <style>
      
     #homePageBackgroundImageDivStyled {
-        
-      background-image: url('https://granddaifuku.com/images/site/background_hu2ae606e267aa07beeac28156068ab79f_913862_500x0_resize_q75_h2_box_2.webp');
+      background-image: url('/images/site/background_hu2ae606e267aa07beeac28156068ab79f_913862_500x0_resize_q75_h2_box_2.webp');
     }
      
     @media (min-width: 500px) and (max-width: 800px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://granddaifuku.com/images/site/background_hu2ae606e267aa07beeac28156068ab79f_913862_800x0_resize_q75_h2_box_2.webp');
+          background-image: url('/images/site/background_hu2ae606e267aa07beeac28156068ab79f_913862_800x0_resize_q75_h2_box_2.webp');
         }
     }
     @media (min-width: 801px) and (max-width: 1200px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://granddaifuku.com/images/site/background_hu2ae606e267aa07beeac28156068ab79f_913862_1200x0_resize_q75_h2_box_2.webp');
+          background-image: url('/images/site/background_hu2ae606e267aa07beeac28156068ab79f_913862_1200x0_resize_q75_h2_box_2.webp');
         }
     }
     @media (min-width: 1201px) and (max-width: 1500px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://granddaifuku.com/images/site/background_hu2ae606e267aa07beeac28156068ab79f_913862_1500x0_resize_q75_h2_box_2.webp');
+          background-image: url('/images/site/background_hu2ae606e267aa07beeac28156068ab79f_913862_1500x0_resize_q75_h2_box_2.webp');
         }
     }
     @media (min-width: 1501px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://granddaifuku.com/images/site/background.webp');
+          background-image: url('/images/site/background.webp');
         }
     }
     </style>
@@ -369,7 +384,7 @@
         
           
         
-        <a href="#about" aria-label="Read More - Yudai Fukushima"><i class="arrow bounce fa fa-chevron-down"></i></a>
+        <a href="#about" class="arrow-center" aria-label="Read More - Yudai Fukushima"><i class="arrow bounce fa fa-chevron-down"></i></a>
       
     
   </div>
@@ -435,6 +450,7 @@
           
         </ul>
       </div>
+      
       
     </div>
     
@@ -576,7 +592,7 @@
 <div class="container-fluid anchor pb-5 skills-section">
   
     <h1 class="text-center">
-      <span id="skills"></span>Skills</h1>
+        <span id="skills"></span>Skills</h1>
   
   <div class="container d-flex-block">
     <div class="row" id="primary-skills">
@@ -587,15 +603,14 @@
       <div class="card-head d-flex">
         
           
-
           
           
             
           
-
-          <img class="card-img-xs" src="/images/sections/skills/git_hu128d69c0d61aa850686d75427db95755_2383_24x24_fit_box_3.png" alt="Git" />
         
-        <h5 class="card-title">Git</h5>
+          <img class="card-img-xs" src="/images/sections/skills/git_hu128d69c0d61aa850686d75427db95755_2383_24x24_fit_box_3.png" alt="Git" />
+          <h5 class="card-title">Git</h5>
+        
       </div>
       <div class="card-body">
         <p class="card-text">Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab.</p>
@@ -611,13 +626,12 @@
       <div class="card-head d-flex">
         
           
-
           
           
-
-          <img class="card-img-xs" src="/images/sections/skills/golang.svg" alt="Go" />
         
-        <h5 class="card-title">Go</h5>
+          <img class="card-img-xs" src="/images/sections/skills/golang.svg" alt="Go" />
+          <h5 class="card-title">Go</h5>
+        
       </div>
       <div class="card-body">
         <p class="card-text">Using Go as the main language for professional development. Capable of writing scalable, testable, and maintainable program.</p>
@@ -633,15 +647,14 @@
       <div class="card-head d-flex">
         
           
-
           
           
             
           
-
-          <img class="card-img-xs" src="/images/sections/skills/python_hu67c47ef312022a0be3534f17d2965862_1730_24x24_fit_q75_h2_box_2.webp" alt="Python" />
         
-        <h5 class="card-title">Python</h5>
+          <img class="card-img-xs" src="/images/sections/skills/python_hu67c47ef312022a0be3534f17d2965862_1730_24x24_fit_q75_h2_box_2.webp" alt="Python" />
+          <h5 class="card-title">Python</h5>
+        
       </div>
       <div class="card-body">
         <p class="card-text">Using Python as one of the main languages for professional development. Capable of writing scalable, testable, and maintainable program.</p>
@@ -657,15 +670,14 @@
       <div class="card-head d-flex">
         
           
-
           
           
             
           
-
-          <img class="card-img-xs" src="/images/sections/skills/rust_hub262db5225d8ec0e394ef71249767ac8_1776_24x24_fit_q75_h2_box_2.webp" alt="Rust" />
         
-        <h5 class="card-title">Rust</h5>
+          <img class="card-img-xs" src="/images/sections/skills/rust_hub262db5225d8ec0e394ef71249767ac8_1776_24x24_fit_q75_h2_box_2.webp" alt="Rust" />
+          <h5 class="card-title">Rust</h5>
+        
       </div>
       <div class="card-body">
         <p class="card-text">Using Rust as one of the main language for personal development. Capable of writing scalable, testable, and maintainable program.</p>
@@ -681,13 +693,12 @@
       <div class="card-head d-flex">
         
           
-
           
           
-
-          <img class="card-img-xs" src="/images/sections/skills/cpp.svg" alt="C&#43;&#43;" />
         
-        <h5 class="card-title">C&#43;&#43;</h5>
+          <img class="card-img-xs" src="/images/sections/skills/cpp.svg" alt="C&#43;&#43;" />
+          <h5 class="card-title">C&#43;&#43;</h5>
+        
       </div>
       <div class="card-body">
         <p class="card-text">Using C++ as the main language of competitive programming.</p>
@@ -703,15 +714,14 @@
       <div class="card-head d-flex">
         
           
-
           
           
             
           
-
-          <img class="card-img-xs" src="/images/sections/skills/cloud_hub66ed10e0310c80897a13e8031374dbc_5410_24x24_fit_q75_h2_box_2.webp" alt="Cloud Computing" />
         
-        <h5 class="card-title">Cloud Computing</h5>
+          <img class="card-img-xs" src="/images/sections/skills/cloud_hub66ed10e0310c80897a13e8031374dbc_5410_24x24_fit_q75_h2_box_2.webp" alt="Cloud Computing" />
+          <h5 class="card-title">Cloud Computing</h5>
+        
       </div>
       <div class="card-body">
         <p class="card-text">Worked with most of the major clouds such as GCP, AWS, Azure etc.</p>
@@ -727,13 +737,12 @@
       <div class="card-head d-flex">
         
           
-
           
           
-
-          <img class="card-img-xs" src="/images/sections/skills/docker.svg" alt="Docker" />
         
-        <h5 class="card-title">Docker</h5>
+          <img class="card-img-xs" src="/images/sections/skills/docker.svg" alt="Docker" />
+          <h5 class="card-title">Docker</h5>
+        
       </div>
       <div class="card-body">
         <p class="card-text">Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process.</p>
@@ -749,15 +758,14 @@
       <div class="card-head d-flex">
         
           
-
           
           
             
           
-
-          <img class="card-img-xs" src="/images/sections/skills/emacs_hu6485d8eab68eb6b7609e7d013be82f82_13692_24x24_fit_q75_h2_box_2.webp" alt="Emacs" />
         
-        <h5 class="card-title">Emacs</h5>
+          <img class="card-img-xs" src="/images/sections/skills/emacs_hu6485d8eab68eb6b7609e7d013be82f82_13692_24x24_fit_q75_h2_box_2.webp" alt="Emacs" />
+          <h5 class="card-title">Emacs</h5>
+        
       </div>
       <div class="card-body">
         <p class="card-text">My favorite editor.</p>
@@ -788,8 +796,7 @@
 <div class="container-fluid anchor pb-5 experiences-section">
   
     <h1 class="text-center">
-      <span id="experiences"></span>Experiences
-    </h1>
+        <span id="experiences"></span>Experiences</h1>
   
 
   <div class="container timeline text-justify">
@@ -806,26 +813,26 @@
     <div class="experience-entry-heading">
         
         
-        <h5>Part-time Software Engineer</h5>
-        <h6>Cannnot display the company name due to the contract.</h6>
+        <h5>Software Engineer Internship</h5>
+        <h6><a href=https://about.mercari.com/en/ title="Mercari, Inc." target="_blank" rel="noopener">Mercari, Inc.</a></h6>
         
-        <p class="text-muted">Aug 2021 - Present,
+        <p class="text-muted">Mar 14, 2022 - Mar 18, 2022,
             Tokyo
         </p>
     </div>
     
-    <p></p>
+    <p>Mercari, Inc. aims to establish a society where resources are circulated and where people can accomplish their goals.</p>
+    
     
     <h6 class="text-muted">Responsibilities:</h6>
     <ul class="justify-content-around">
     
-        <li>Design and improve APIs</li>
+        <li>Learn about Go 1.18</li>
     
-        <li>Migrate services from perl to Golang</li>
-    
-        <li>Solve the existing problems</li>
+        <li>Create an OSS using the new feature with Go 1.18</li>
     
     </ul>
+    
 </div>
 
 
@@ -855,23 +862,27 @@
         
         
         <h5>Part-time Software Engineer</h5>
-        <h6><a href=https://www.future.co.jp/ title="Future Corporation" target="_blank" rel="noopener">Future Corporation</a></h6>
+        <h6>Cannnot display the company name due to the contract.</h6>
         
-        <p class="text-muted">June 2020 - Aug 2020,
+        <p class="text-muted">Aug 2021 - Present,
             Tokyo
         </p>
     </div>
     
-    <p>Future Group has developed technology-based businesses in two main areas “IT consulting and services” and “business innovation.”</p>
+    <p></p>
+    
     
     <h6 class="text-muted">Responsibilities:</h6>
     <ul class="justify-content-around">
     
-        <li>Develop the web applications</li>
+        <li>Design and improve APIs</li>
     
-        <li>Develop the internal tools for cloud.</li>
+        <li>Migrate services from perl to Golang</li>
+    
+        <li>Solve the existing problems</li>
     
     </ul>
+    
 </div>
 
 
@@ -908,6 +919,54 @@
     <div class="experience-entry-heading">
         
         
+        <h5>Part-time Software Engineer</h5>
+        <h6><a href=https://www.future.co.jp/ title="Future Corporation" target="_blank" rel="noopener">Future Corporation</a></h6>
+        
+        <p class="text-muted">June 2020 - Aug 2020,
+            Tokyo
+        </p>
+    </div>
+    
+    <p>Future Group has developed technology-based businesses in two main areas “IT consulting and services” and “business innovation.”</p>
+    
+    
+    <h6 class="text-muted">Responsibilities:</h6>
+    <ul class="justify-content-around">
+    
+        <li>Develop the web applications</li>
+    
+        <li>Develop the internal tools for cloud.</li>
+    
+    </ul>
+    
+</div>
+
+
+
+       </div>
+     
+     
+       <div class="row horizontal-line">
+  <div class="col-1 col-lg-2 timeline-side-div">
+    <div class="corner"></div>
+  </div>
+  <div class="col-10 col-lg-8">
+    <hr />
+  </div>
+  <div class="col-1 col-lg-2 timeline-side-div">
+    <div class="corner"></div>
+  </div>
+</div>
+
+     
+   
+     
+       <div class="row align-items-center justify-content-end d-flex">
+         
+  <div class="col-10 col-lg-8">
+    <div class="experience-entry-heading">
+        
+        
         <h5>Software Engineer Internship</h5>
         <h6><a href=https://www.team-lab.com/ title="teamLab Inc." target="_blank" rel="noopener">teamLab Inc.</a></h6>
         
@@ -918,15 +977,21 @@
     
     <p>While blurring the boundaries between science, technology, design, art, etc., teamLab Inc. provides solutions to things by creating things or through the process of creating things under the theme of &ldquo;experimentation and innovation.&rdquo;</p>
     
+    
     <h6 class="text-muted">Responsibilities:</h6>
     <ul class="justify-content-around">
     
         <li>Build a web application</li>
     
     </ul>
+    
 </div>
 
 
+
+         <div class="col-1 col-lg-2 text-center vertical-line d-inline-flex justify-content-center">
+  <div class="circle font-weight-bold">4</div>
+</div>
 
        </div>
      
@@ -934,6 +999,7 @@
    
   </div>
 </div>
+
           </div>
           
           
@@ -949,18 +1015,21 @@
 
 
 <div class="container-fluid anchor pb-5 education-section">
-    
+  
     <h1 class="text-center">
         <span id="education"></span>Education</h1>
-    
+  
 
-    <div class="container">
-        <table class="education-info-table">
-            <tbody>
-                
-                <tr>
-                    <td class="icon">
-                        <div class="hline"></div>
+  <div class="container">
+    <table class="education-info-table">
+        <tbody>
+            
+            
+            <tr>
+                <td class="icon">
+                    
+                    <div class="hline"></div>
+                    
                         <div class="icon-holder">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
@@ -978,7 +1047,7 @@
                                 </div>
                                 <div class="timeframe col-lg-2 col-md-4">April 2021 - Present</div>
                             </div>
-                            <h6>Master of Engineergin</h6>
+                            <h6>Master of Engineering</h6>
                             
                             
                             
@@ -987,9 +1056,11 @@
                     </td>
                 </tr>
                 
-                <tr>
-                    <td class="icon">
-                        <div class="hline"></div>
+            <tr>
+                <td class="icon">
+                    
+                    <div class="hline"></div>
+                    
                         <div class="icon-holder">
                             <i class="fas fa-graduation-cap"></i>
                         </div>
@@ -1016,9 +1087,11 @@
                     </td>
                 </tr>
                 
-                <tr>
-                    <td class="icon">
-                        <div class="hline"></div>
+            <tr>
+                <td class="icon">
+                    
+                    <div class="hline"></div>
+                    
                         <div class="icon-holder">
                             <i class="fas fa-school"></i>
                         </div>
@@ -1049,6 +1122,7 @@
         </table>
     </div>
 </div>
+
           </div>
           
           
@@ -1065,24 +1139,25 @@
 
 <div class="container-fluid anchor pb-5 projects-section" id="projects">
   
-    <h1 class="text-center">Projects</h1>
+    <h1 class="text-center">
+        <span id="projects"></span>Projects</h1>
   
   <div class="container ml-auto text-center">
     <div class="btn-group flex-wrap" role="group" id="project-filter-buttons">
       
-      <button type="button" class="btn btn-dark" data-filter="all">
+      <button type="button" class="btn btn-dark project-filtr-control" data-filter="all">
         All
       </button>
       
-      <button type="button" class="btn btn-dark" data-filter="professional">
+      <button type="button" class="btn btn-dark project-filtr-control" data-filter="professional">
         Professional
       </button>
       
-      <button type="button" class="btn btn-dark" data-filter="academic">
+      <button type="button" class="btn btn-dark project-filtr-control" data-filter="academic">
         Academic
       </button>
       
-      <button type="button" class="btn btn-dark" data-filter="hobby">
+      <button type="button" class="btn btn-dark project-filtr-control" data-filter="hobby">
         Hobby
       </button>
       
@@ -1375,7 +1450,7 @@
         </div>
       </a>
       <div class="card-body text-justify pt-1 pb-1">
-        <p>Littel Pascal compiler.</p>
+        <p>Little Pascal compiler.</p>
         
         <div class="project-card-footer">
           
@@ -1395,6 +1470,65 @@
               data-icon="octicon-standard"
               data-show-count="true"
               aria-label="Star Mini-Mini-Pascal"
+              >Star</a
+            >
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+        <div
+  class="col-sm-12 col-md-6 col-lg-4 p-2 filtr-item"
+  data-category='all, hobby'
+>
+  <div class="card mt-1">
+    <div class="card">
+      <a class="card-header" href="https://github.com/granddaifuku/blahbrah" target="_blank" rel="noopener">
+        <div>
+          <div class="d-flex">
+            
+
+            
+            
+            
+            
+
+            <img class="card-img-xs" src="/images/sections/projects/golang.svg" alt="blahbrah" />
+            
+            
+            <h5 class="card-title mb-0">blahbrah</h5>
+          </div>
+          <div class="sub-title">
+            <span>Developer</span>
+            <span>Mar 2021 - Present</span>
+          </div>
+        </div>
+      </a>
+      <div class="card-body text-justify pt-1 pb-1">
+        <p>Static analyzer that finds ineffectual blank lines after the left brace and before the right brace in Golang.</p>
+        
+        <div class="project-card-footer">
+          
+            <div class="project-tags-holder">
+              
+                  <span class="badge btn-info">
+                    hobby
+                  </span>
+              
+            </div>
+          
+          <div class="project-btn-holder">
+            
+            <a
+              class="github-button-inactive project-btn"
+              href="https://github.com/granddaifuku/blahbrah"
+              data-icon="octicon-standard"
+              data-show-count="true"
+              aria-label="Star blahbrah"
               >Star</a
             >
             
@@ -1435,7 +1569,7 @@
 <div class="container-fluid anchor pb-5 recent-posts-section">
   
     <h1 class="text-center">
-      <span id="recent-posts"></span>Recent Posts</h1>
+        <span id="recent-posts"></span>Recent Posts</h1>
   
   <div class="container">
     <div class="row" id="recent-post-cards">
@@ -1450,7 +1584,7 @@
       </div>
       <div class="card-body">
         <h5 class="card-title">TopCoder SRM 676 Div.1 Easy: Water Tank</h5>
-        <p class="card-text post-summary"> Overview  You are given an empty water tank with a capacity of \(C\) liters. Into this tank, the water flows \(x[i]\) liters for \(t[i]\) seconds. (\(i = 0\) to \(n - 1\)) You can set the value of output pipe to any maximum output rate \(R\) (not negative value, but do not have to be an integer) in liters per second. Determine the most little output rate limit \(R\) such that the amount of water in the tank will never exceed \(C\) liters.</p>
+        <p class="card-text post-summary"> Overview You are given an empty water tank with a capacity of \(C\) liters. Into this tank, the water flows \(x[i]\) liters for \(t[i]\) seconds. (\(i = 0\) to \(n - 1\)) You can set the value of output pipe to any maximum output rate \(R\) (not negative value, but do not have to be an integer) in liters per second. Determine the most little output rate limit \(R\) such that the amount of water in the tank will never exceed \(C\) liters.</p>
       </div>
       <div class="card-footer">
         <span class="float-left">September 21, 2021</span>
@@ -1471,7 +1605,7 @@
       </div>
       <div class="card-body">
         <h5 class="card-title">Codeforces #713(Div.3) E: Permutation by Sum</h5>
-        <p class="card-text post-summary"> Problem Overview  Consider the permutation 1 to \(n\) called \(P\). The parameters \(l, r, s\) that satisfies \(1 \leq l \leq r \leq n\) and \(1 \leq s \leq \frac{n(n + 1)}{2}\) are given. Find the permutation which satisfies \(P_{l} + P_{l + 1} + &hellip; + P_{r} = s\). Print any permutation of length \(n\) that fits the condition above if such a permutation exists; otherwise, -1.  Problem Explanation First, consider the minimum and the maximum value we can generate with the length \(r - l + 1\).</p>
+        <p class="card-text post-summary"> Problem Overview Consider the permutation 1 to \(n\) called \(P\). The parameters \(l, r, s\) that satisfies \(1 \leq l \leq r \leq n\) and \(1 \leq s \leq \frac{n(n + 1)}{2}\) are given. Find the permutation which satisfies \(P_{l} + P_{l + 1} + &hellip; + P_{r} = s\). Print any permutation of length \(n\) that fits the condition above if such a permutation exists; otherwise, -1. Problem Explanation First, consider the minimum and the maximum value we can generate with the length \(r - l + 1\).</p>
       </div>
       <div class="card-footer">
         <span class="float-left">May 9, 2021</span>
@@ -1482,58 +1616,9 @@
 </div>
 
       
-        <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/search/" title="অনুসন্ধানের ফলাফল" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'
-          alt="Card image cap"
-        />
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">অনুসন্ধানের ফলাফল</h5>
-        <p class="card-text post-summary"> This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&ldquo;HTML&rdquo;, &ldquo;JSON&rdquo;] ```</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">June 8, 2010</span>
-        <a href="/search/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
-      </div>
-    </div>
-  </a>
-</div>
-
-      
-        <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/search/" title="Search Results" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'
-          alt="Card image cap"
-        />
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Search Results</h5>
-        <p class="card-text post-summary"> This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&ldquo;HTML&rdquo;, &ldquo;JSON&rdquo;] ```</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">June 8, 2010</span>
-        <a href="/search/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
-      </div>
-    </div>
-  </a>
-</div>
-
-      
     </div>
   </div>
+  
 </div>
 
           </div>
@@ -1558,6 +1643,7 @@ Initial setup Search depends on additional output content type of JSON in config
 
 
 
+
   
   
     
@@ -1566,6 +1652,9 @@ Initial setup Search depends on additional output content type of JSON in config
   
   
     
+  
+
+  
   
 
   
@@ -1596,7 +1685,7 @@ Initial setup Search depends on additional output content type of JSON in config
   
   
 
-  <footer class="container-fluid text-center align-content-center footer pb-2">
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
       <div class="row text-left">
         
@@ -1659,6 +1748,9 @@ Initial setup Search depends on additional output content type of JSON in config
                   <a class="smooth-scroll" href="https://granddaifuku.com/#recent-posts">Recent Posts</a>
                 </li>
               
+            
+              
+            
           </ul>
           
         </div>
@@ -1687,7 +1779,7 @@ Initial setup Search depends on additional output content type of JSON in config
     <div class="container">
       <div class="row text-left">
         <div class="col-md-4">
-          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
             <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
@@ -1717,10 +1809,28 @@ Initial setup Search depends on additional output content type of JSON in config
 <script type="text/javascript" src="/js/main.js"></script>
 
 
+
     
     <script src="/js/itype.min.js"></script>
     <script src="/js/github-button.js"></script>
     <script src="/js/home.js"></script>
     <script src="/js/jquery.filterizr.min.js"></script>
-  </body>
+
+    
+<link rel="stylesheet" href="/katex/katex.min.css">
+<script type="text/javascript" defer src="/katex/katex.min.js"></script>
+<script type="text/javascript" defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);">
+    renderMathInElement(
+        document.body,
+        {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ]
+        }
+    );
+</script>
+</body>
 </html>

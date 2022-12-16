@@ -11,11 +11,17 @@
 <link rel="stylesheet" href="/css/layouts/main.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
+
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
 
 
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
 
 
 
@@ -24,9 +30,8 @@
 <meta property="og:description" content="Rust lettre &amp; さくらメールボックス" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://granddaifuku.com/jp/posts/development/rust-lettre-sakura-mailbox/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-12-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-12-18T00:00:00+00:00" />
-
+<meta property="article:published_time" content="2021-06-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-06-01T00:00:00+00:00" />
 
 
     
@@ -44,8 +49,11 @@
 
 
     
-    
-  </head>
+
+
+
+
+</head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
     <div class="container-fluid bg-dimmed wrapper">
@@ -88,6 +96,7 @@
     <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
       
+      
       </ul>
     </div>
   </div>
@@ -106,11 +115,11 @@
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
         <form class="mx-auto" method="get" action="/jp/search">
-          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+          <input type="text" name="keyword" value="" placeholder="検索" data-search="" id="search-box" />
         </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/jp/posts" data-filter="all">投稿</a></li>
+            <li id="list-heading"><a href="/jp/posts/" data-filter="all">投稿</a></li>
             <div class="subtree">
                 
   
@@ -184,15 +193,15 @@
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://granddaifuku.com/images/default-hero.jpg);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/default-hero.jpg);'>
       </div>
 
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/posts/rust_hub262db5225d8ec0e394ef71249767ac8_1776_120x120_fit_q75_h2_box_2.webp' alt="Author Image">
+          <img class="rounded-circle" src='/images/daifuku_hud3c0ef16b7648fb473761eb1b795074c_7346_120x120_fit_q75_h2_box_2.webp' alt="Author Image">
           <h5 class="author-name">Yudai Fukushima</h5>
-          <p>December 18, 2021</p>
+          <p>Tuesday, June 1, 2021</p>
         </div>
 
         <div class="title">
@@ -200,118 +209,117 @@
         </div>
         
         <div class="taxonomy-terms">
-            <ul>
+          <ul style="padding-left: 0;">
             
           </ul>
         </div>
         
         <div class="post-content" id="post-content">
-          <p>この記事は <a href="https://qiita.com/advent-calendar/2021/rust">Rust Advent Calendar 2021 カレンダー 3</a> の 20 日目の記事です。</p>
-<h2 id="はじめに">はじめに</h2>
-<p>Rust の lettre クレートでさくらのメールボックスを用いて独自ドメインでのメールを送信する際の記録です。</p>
-<p>前提としては、</p>
+          <h2 id="はじめに">はじめに</h2>
+<p>Rust の lettre クレートでさくらのメールボックスを用いて独自ドメインでのメールを送信する際の記録です。 <br/></p>
+<p>前提としては、 <br/></p>
 <ul>
 <li>
-<p>xdomain にて独自ドメインを取得済み</p>
+<p>xdomain にて独自ドメインを取得済み <br/></p>
 </li>
 <li>
-<p>Netlify DNS にネームサーバを設定してる</p>
-<p>「独自ドメインのメールアドレスでメールの送信がしたいが、ネームサーバは変更したくない」といった状態です。</p>
+<p>Netlify DNS にネームサーバを設定してる <br/></p>
+<p>独自ドメインのメールアドレスでメールの送信がしたいが、ネームサーバは変更したくないというような状態です。 <br/></p>
 </li>
 </ul>
 <h2 id="lettre"><a href="https://github.com/lettre/lettre">lettre</a></h2>
-<p>Rust のメーラライブラリで、</p>
+<p>Rust のメーラライブラリで、 <br/></p>
 <ul>
 <li>
-<p>SMTP(Simple Mail Transfer Protocol)を用いてセキュアなメールの送信ができる</p>
+<p>SMTP(Simple Mail Transfer Protocol)を用いてセキュアなメールの送信ができる <br/></p>
 </li>
 <li>
-<p>ファイルの送信</p>
+<p>ファイルの送信 <br/></p>
 </li>
 <li>
-<p>非同期サポート</p>
+<p>非同期サポート <br/></p>
 </li>
 <li>
-<p>ユニコードサポート</p>
-<p>などなど欲しい機能が一通り揃っています。</p>
+<p>ユニコードサポート <br/></p>
+<p>などなど欲しい機能が一通り揃っています。 <br/></p>
 </li>
 </ul>
-<h2 id="さくらのメールボックス"><a href="https://rs.sakura.ad.jp/mail/">さくらのメールボックス</a></h2>
-<p>かの有名なさくらインターネットさんが用意されているプランの一つで、</p>
+<h2 id="さくらのメールボックスとは">さくらのメールボックスとは</h2>
+<p>かの有名なさくらインターネットさんが用意されているプランの一つで、 <br/></p>
 <ul>
 <li>
-<p>独自ドメインのメールが使える</p>
+<p>独自ドメインのメールが使える <br/></p>
 </li>
 <li>
-<p>月額 87円（安すぎでは？）</p>
-<p>と私は主に月額にひかれて使い始めました。</p>
+<p>月額 87円（安すぎでは？） <br/></p>
+<p>と主に月額にひかれて使い始めました。 <br/></p>
 </li>
 </ul>
 <h2 id="やりたいこと">やりたいこと</h2>
-<p><a href="https://www.sakura.ne.jp/mail/">さくらのメールボックスの登録</a>、<a href="https://help.sakura.ad.jp/360000237321/#03">独自ドメインの追加</a>、<a href="https://help.sakura.ad.jp/360000225362/#02">メールアドレスの作成</a>は済んでいるものとします。<br>
-Rust 内から lettre を使って独自ドメインからメールを送信しましょう。</p>
-<p>まず、公式のサンプルを見てみます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> lettre::transport::smtp::authentication::Credentials;
-<span style="color:#66d9ef">use</span> lettre::{Message, SmtpTransport, Transport};
-
-<span style="color:#66d9ef">let</span> email <span style="color:#f92672">=</span> Message::builder()
-  .from(<span style="color:#e6db74">&#34;NoBody &lt;nobody@domain.tld&gt;&#34;</span>.parse().unwrap())
-  .reply_to(<span style="color:#e6db74">&#34;Yuin &lt;yuin@domain.tld&gt;&#34;</span>.parse().unwrap())
-  .to(<span style="color:#e6db74">&#34;Hei &lt;hei@domain.tld&gt;&#34;</span>.parse().unwrap())
-  .subject(<span style="color:#e6db74">&#34;Happy new year&#34;</span>)
-  .body(String::from(<span style="color:#e6db74">&#34;Be happy!&#34;</span>))
-  .unwrap();
-
-<span style="color:#66d9ef">let</span> creds <span style="color:#f92672">=</span> Credentials::new(<span style="color:#e6db74">&#34;smtp_username&#34;</span>.to_string(), <span style="color:#e6db74">&#34;smtp_password&#34;</span>.to_string());
-
-<span style="color:#75715e">// Open a remote connection to gmail
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> mailer <span style="color:#f92672">=</span> SmtpTransport::relay(<span style="color:#e6db74">&#34;smtp.gmail.com&#34;</span>)
-  .unwrap()
-  .credentials(creds)
-  .build();
-
-<span style="color:#75715e">// Send the email
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">match</span> mailer.send(<span style="color:#f92672">&amp;</span>email) {
-  Ok(_) <span style="color:#f92672">=&gt;</span> println!(<span style="color:#e6db74">&#34;Email sent successfully!&#34;</span>),
-  Err(e) <span style="color:#f92672">=&gt;</span> panic!(<span style="color:#e6db74">&#34;Could not send email: {:?}&#34;</span>, e),
-</code></pre></div><p>ここで必要になるものが</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">let</span> creds <span style="color:#f92672">=</span> Credentials::new(<span style="color:#e6db74">&#34;smtp_username&#34;</span>.to_string(), <span style="color:#e6db74">&#34;smtp_password&#34;</span>.to_string());
-
-<span style="color:#75715e">// Open a remote connection to gmail
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> mailer <span style="color:#f92672">=</span> SmtpTransport::relay(<span style="color:#e6db74">&#34;smtp.gmail.com&#34;</span>)
-  .unwrap()
-  .credentials(creds)
-  .build();
-</code></pre></div><p>の部分です。</p>
-<p>初めに <code>smtp_username</code>, <code>smtp_password</code> にそれぞれ独自ドメインを使用したメールアドレス、そのメールアドレス作成時のパスワードを設定します。<br>
-ここでは、例としてメールアドレスが、 <code>dummy@exmaple_domain.com</code> でパスワードが、 <code>dummy_password</code> であるものとします。</p>
-<p>続いて、 <code>mailer</code> の接続情報ですが、ここに初期ドメインを設定します。アカウント情報から見れます。<br>
-例として、 <code>example.initial.domain.com</code> としておきます。</p>
-<p><span style="color: red"> git等を使用する際には、ドメイン情報やパスワード等を流出しないように気をつけてください。</span></p>
-<p>したがって、ソースコードは次のようになります。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">let</span> creds <span style="color:#f92672">=</span> Credentials::new(<span style="color:#e6db74">&#34;dummy@example_domain.com&#34;</span>.to_string(), <span style="color:#e6db74">&#34;dummy_password&#34;</span>.to_string());
-
-<span style="color:#75715e">// Open a remote connection
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> mailer <span style="color:#f92672">=</span> SmtpTransport::relay(<span style="color:#e6db74">&#34;example.initial.domain.com&#34;</span>)
-  .unwrap()
-  .credentials(creds)
-  .build();
-</code></pre></div><p>しかし、このままではさくらのメールボックスを使った送信はできません。</p>
-<p>さくらのメールボックスではメールの暗号化通信に <code>STARTTLS</code> を使用します。<br>
-したがって、mailer 部分を次のように改変します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#75715e">// Open a remote connection using STARTTLS
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> mailer <span style="color:#f92672">=</span> SmtpTransport::starttls_relay(<span style="color:#e6db74">&#34;exmaple.initial.domain.com&#34;</span>)
-  .unwrap()
-  .credentials(creds)
-  .build();
-</code></pre></div><p>これにより lettre を経由して独自ドメインからメールの送信ができるようになりました。</p>
-<p><span style="color: red"> git等を使用する際には、ドメイン情報やパスワード等を流出しないように気をつけてください。</span></p>
+<p><a href="https://www.sakura.ne.jp/mail/">さくらのメールボックスの登録</a>、<a href="https://help.sakura.ad.jp/360000237321/#03">独自ドメインの追加</a>、<a href="https://help.sakura.ad.jp/360000225362/#02">メールアドレスの作成</a>は済んでいるものとします。 <br/>
+Rust 内から lettre を使って独自ドメインからメールを送信しましょう。 <br/></p>
+<p>まず、公式のサンプルを見てみます。 <br/></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> lettre::transport::smtp::authentication::Credentials;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> lettre::{Message, SmtpTransport, Transport};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> email <span style="color:#f92672">=</span> Message::builder()
+</span></span><span style="display:flex;"><span>  .from(<span style="color:#e6db74">&#34;NoBody &lt;nobody@domain.tld&gt;&#34;</span>.parse().unwrap())
+</span></span><span style="display:flex;"><span>  .reply_to(<span style="color:#e6db74">&#34;Yuin &lt;yuin@domain.tld&gt;&#34;</span>.parse().unwrap())
+</span></span><span style="display:flex;"><span>  .to(<span style="color:#e6db74">&#34;Hei &lt;hei@domain.tld&gt;&#34;</span>.parse().unwrap())
+</span></span><span style="display:flex;"><span>  .subject(<span style="color:#e6db74">&#34;Happy new year&#34;</span>)
+</span></span><span style="display:flex;"><span>  .body(String::from(<span style="color:#e6db74">&#34;Be happy!&#34;</span>))
+</span></span><span style="display:flex;"><span>  .unwrap();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> creds <span style="color:#f92672">=</span> Credentials::new(<span style="color:#e6db74">&#34;smtp_username&#34;</span>.to_string(), <span style="color:#e6db74">&#34;smtp_password&#34;</span>.to_string());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Open a remote connection to gmail
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> mailer <span style="color:#f92672">=</span> SmtpTransport::relay(<span style="color:#e6db74">&#34;smtp.gmail.com&#34;</span>)
+</span></span><span style="display:flex;"><span>  .unwrap()
+</span></span><span style="display:flex;"><span>  .credentials(creds)
+</span></span><span style="display:flex;"><span>  .build();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Send the email
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">match</span> mailer.send(<span style="color:#f92672">&amp;</span>email) {
+</span></span><span style="display:flex;"><span>  Ok(_) <span style="color:#f92672">=&gt;</span> println!(<span style="color:#e6db74">&#34;Email sent successfully!&#34;</span>),
+</span></span><span style="display:flex;"><span>  Err(e) <span style="color:#f92672">=&gt;</span> panic!(<span style="color:#e6db74">&#34;Could not send email: {:?}&#34;</span>, e),
+</span></span></code></pre></div><p>ここで必要になるものが <br/></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> creds <span style="color:#f92672">=</span> Credentials::new(<span style="color:#e6db74">&#34;smtp_username&#34;</span>.to_string(), <span style="color:#e6db74">&#34;smtp_password&#34;</span>.to_string());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Open a remote connection to gmail
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> mailer <span style="color:#f92672">=</span> SmtpTransport::relay(<span style="color:#e6db74">&#34;smtp.gmail.com&#34;</span>)
+</span></span><span style="display:flex;"><span>  .unwrap()
+</span></span><span style="display:flex;"><span>  .credentials(creds)
+</span></span><span style="display:flex;"><span>  .build();
+</span></span></code></pre></div><p>の部分です。 <br/></p>
+<p>初めに <code>smtp_username</code>, <code>smtp_password</code> にそれぞれ独自ドメインを使用したメールアドレス、そのメールアドレス作成時のパスワードを設定します。 <br/>
+ここでは、例としてメールアドレスが、 <code>dummy@exmaple_domain.com</code> でパスワードが、 <code>dummy_password</code> であるものとします。 <br/></p>
+<p>続いて、 <code>mailer</code> の接続情報ですが、ここに初期ドメインを設定します。アカウント情報から見れます。 <br/>
+例として、 <code>example.initial.domain.com</code> としておきます。 <br/></p>
+<p><span style="color: red"> git等にあげる際には、ドメイン情報やパスワード等を流出しないように気をつけてください。</span> <br/></p>
+<p>したがって、ソースコードは次のようになります。 <br/></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> creds <span style="color:#f92672">=</span> Credentials::new(<span style="color:#e6db74">&#34;dummy@example_domain.com&#34;</span>.to_string(), <span style="color:#e6db74">&#34;dummy_password&#34;</span>.to_string());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Open a remote connection
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> mailer <span style="color:#f92672">=</span> SmtpTransport::relay(<span style="color:#e6db74">&#34;example.initial.domain.com&#34;</span>)
+</span></span><span style="display:flex;"><span>  .unwrap()
+</span></span><span style="display:flex;"><span>  .credentials(creds)
+</span></span><span style="display:flex;"><span>  .build();
+</span></span></code></pre></div><p>しかし、このままではさくらのメールボックスを使った送信はできません。 <br/></p>
+<p>さくらのメールボックスではメールの暗号化通信に <code>STARTTLS</code> を使用します。 <br/>
+したがって、mailer 部分を次のように改変します。 <br/></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">// Open a remote connection using STARTTLS
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> mailer <span style="color:#f92672">=</span> SmtpTransport::starttls_relay(<span style="color:#e6db74">&#34;exmaple.initial.domain.com&#34;</span>)
+</span></span><span style="display:flex;"><span>  .unwrap()
+</span></span><span style="display:flex;"><span>  .credentials(creds)
+</span></span><span style="display:flex;"><span>  .build();
+</span></span></code></pre></div><p>これにより lettre を経由して独自ドメインからメールの送信ができるようになりました。 <br/></p>
+<p><span style="color: red"> git等にあげる際には、ドメイン情報やパスワード等を流出しないように気をつけてください。</span> <br/></p>
 <h2 id="参考リンク">参考リンク</h2>
 <ul>
-<li><a href="https://github.com/lettre/lettre">lettre github</a></li>
-<li><a href="https://midorimici.com/posts/dokuji-domain-mail-sakura-netlify/">みどりみちのブログ</a></li>
-<li><a href="https://www.sakura.ne.jp/mail/">さくらのメールボックス</a></li>
-<li><a href="https://help.sakura.ad.jp/360000237321/#03">さくらのレンタルサーバ（ドメインの設定）</a></li>
+<li><a href="https://github.com/lettre/lettre">lettre github</a> <br/></li>
+<li><a href="https://midorimici.com/posts/dokuji-domain-mail-sakura-netlify/">みどりみちのブログ</a> <br/></li>
+<li><a href="https://www.sakura.ne.jp/mail/">さくらのメールボックス</a> <br/></li>
+<li><a href="https://help.sakura.ad.jp/360000237321/#03">さくらのレンタルサーバ（ドメインの設定）</a> <br/></li>
 <li><a href="https://help.sakura.ad.jp/360000225362/#02">さくらのレンタルサーバ（メールアドレスの作成）</a></li>
 </ul>
 
@@ -420,8 +428,7 @@ Rust 内から lettre を使って独自ドメインからメールを送信し�
 
       
       
-        
-      
+
       
       
 
@@ -446,7 +453,7 @@ Rust 内から lettre を使って独自ドメインからメールを送信し�
   <ul>
     <li><a href="#はじめに">はじめに</a></li>
     <li><a href="#lettre"><a href="https://github.com/lettre/lettre">lettre</a></a></li>
-    <li><a href="#さくらのメールボックス"><a href="https://rs.sakura.ad.jp/mail/">さくらのメールボックス</a></a></li>
+    <li><a href="#さくらのメールボックスとは">さくらのメールボックスとは</a></li>
     <li><a href="#やりたいこと">やりたいこと</a></li>
     <li><a href="#参考リンク">参考リンク</a></li>
   </ul>
@@ -471,6 +478,7 @@ Rust 内から lettre を使って独自ドメインからメールを送信し�
 
 
 
+
   
   
     
@@ -479,6 +487,9 @@ Rust 内から lettre を使って独自ドメインからメールを送信し�
   
   
     
+  
+
+  
   
 
   
@@ -509,7 +520,7 @@ Rust 内から lettre を使って独自ドメインからメールを送信し�
   
   
 
-  <footer class="container-fluid text-center align-content-center footer pb-2">
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
       <div class="row text-left">
         
@@ -572,6 +583,9 @@ Rust 内から lettre を使って独自ドメインからメールを送信し�
                   <a class="smooth-scroll" href="https://granddaifuku.com/jp/#recent-posts">最近の投稿</a>
                 </li>
               
+            
+              
+            
           </ul>
           
         </div>
@@ -600,7 +614,7 @@ Rust 内から lettre を使って独自ドメインからメールを送信し�
     <div class="container">
       <div class="row text-left">
         <div class="col-md-4">
-          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
             <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
@@ -630,6 +644,7 @@ Rust 内から lettre を使って独自ドメインからメールを送信し�
 <script type="text/javascript" src="/js/main.js"></script>
 
 
+
     
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
@@ -638,13 +653,31 @@ Rust 内から lettre を使って独自ドメインからメールを送信し�
   hljs.initHighlightingOnLoad();
 </script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);">
+
+
+    <link rel="stylesheet" href="/katex/katex.min.css">
+<script type="text/javascript" defer src="/katex/katex.min.js"></script>
+<script type="text/javascript" defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);">
+    renderMathInElement(
+        document.body,
+        {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ]
+        }
+    );
 </script>
 
 
 
-  </body>
+
+
+
+
+
+    
+</body>
 </html>
