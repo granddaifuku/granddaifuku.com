@@ -325,7 +325,7 @@ author:
 
   *** まとめ
   Emacs 用の GitLens パッケージ Blamer.el を紹介しました。
-  メリークリスマス！
+  良い Emacs ライフを！
 
   
   *** 参考リンク
