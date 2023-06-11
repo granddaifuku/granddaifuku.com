@@ -1,0 +1,16 @@
+---
+import Social from './Social.astro'
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="flex flex-col">
+	<div class="flex flex-row justify-center">
+		<Social />
+	</div>
+	<div class="flex justify-center p-6">
+		This site is maintained by<a href="/" target="_blank" rel="noopener">
+		<span class="text-orange-400">Yudai Fukushima</span></a>using<a href="https://astro.build/" target="_blank" rel="noopener"><span class="text-orange-400">Astro</span></a>and hosted by<a href="https://www.netlify.com/" rel="noopener">Netlify</a>.
+		&copy; {currentYear} Yudai Fukushima.
+	</div>
+</footer>
