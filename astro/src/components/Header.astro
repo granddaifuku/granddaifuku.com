@@ -1,9 +1,47 @@
 ---
-import { SITE_NAME } from "../consts/meta.ts"
+import { SITE_NAME } from '../consts/meta.ts';
+import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
+
+const menuItems = [
+	{
+		title: 'About',
+		path: '/',
+	},
+	{
+		title: 'Work',
+		path: '/',
+	},
+	{
+		title: 'Projects',
+		path: '/',
+	},
+	{
+		title: 'Posts',
+		path: '/',
+	},
+];
 ---
-<header>
-	<div>
-		<h1>{SITE_NAME}</h1>
-	</div>
+<header class="my-5 flex flex-col items-center justify-between lg:flex-row">
+	<Astronav>
+		<div class="flex w-full items-center justify-between lg:w-auto">
+			<a class="px-4 py-1.5">{SITE_NAME}</a>
+			<div class="block lg:hidden">
+				<MenuIcon class="w-4 h-4 text-gray-800" />
+			</div>
+		</div>
+		<MenuItems class="hidden w-full lg:mt-0 lg:flex lg:w-auto">
+			<ul class="flex flex-col lg:flex-row lg:gap-3">
+				{
+				menuItems.map((item) => (
+				<>
+					<li>
+						<a href={item.path} class="flex py-2 text-black-400 lg:px-3">{item.title}</a>
+					</li>
+				</>
+				))
+				}
+			</ul>
+		</MenuItems>
+	</Astronav>
 </header>
 	
