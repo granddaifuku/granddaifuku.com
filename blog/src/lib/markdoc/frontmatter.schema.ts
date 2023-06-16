@@ -23,8 +23,8 @@ const baseSchema = z.object({
   If you don't want to link posts written in external websites, you could
   simplify this to just use the markdown schema.
 */
-export const blog = z.discriminatedUnion("external", [
-  // markdown
+export const postSchema = z.discriminatedUnion("external", [
+	// markdown
   baseSchema.extend({
     external: z.literal(false),
     description: z.optional(z.string()),
