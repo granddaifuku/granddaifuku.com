@@ -1,30 +1,19 @@
 ---
-title: "Codeforces #713(Div.3) E: Permutation by Sum"
+title: "Codeforces #713(Div.3) E: Permutation by Sum [JP]"
 date: 2021-05-07
-lastmod: 2021-05-07
-categories: ["Codeforces"]
 draft: false
 description: "Codeforces #713 E 解説"
-math: true
-menu:
-  sidebar:
-    name: Codeforces 713 E
-    identifier: cf-713-e-jp
-    parent: competitive-jp
-    weight: 10
-author:
-  name: Yudai Fukushima
-  image: /images/posts/cf.webp
+external: false
 ---
 
-## 問題概要 {#問題概要}
+## 問題概要
 
 -   1 から \\(n\\) までの順列 \\(P\\) を考える
 -   \\(1 \leq l \leq r \leq n\\) の \\(l, r\\), \\(1 \leq s \leq \frac{n(n + 1)}{2}\\) の \\(s\\) が与えられる
 -   \\(P\_{l} + P\_{l + 1} + ... + P\_{r} = s\\) となる 1 から \\(n\\) までの順列が存在するならばそれを出力、存在しないならば -1 を出力する
 
 
-## 解説 {#解説}
+## 解説
 
 1 から \\(n\\) までの順列の中で長さ \\(r - l + 1\\) で生成できる最小値、最大値を考える。  
 以下、\\(k = r - l + 1\\) として扱う。  

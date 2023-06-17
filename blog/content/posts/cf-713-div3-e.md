@@ -1,23 +1,12 @@
 ---
-title: "Codeforces #713(Div.3) E: Permutation by Sum"
+title: "Codeforces #713(Div.3) E: Permutation by Sum [EN]"
 date: 2021-05-09
-lastmod: 2021-05-09
-categories: ["Codeforces"]
 draft: false
 description: "Codeforces #713 E"
-math: true
-menu:
- sidebar:
-   name: Codeforces 713 E
-   identifier: cf-713-e
-   parent: competitive
-   weight: 10
-author:
-  name: Yudai Fukushima
-  image: /images/posts/cf.webp
+external: false
 ---
 
-## Problem Overview {#problem-overview}
+## Problem Overview
 
 -   Consider the permutation 1 to \\(n\\) called \\(P\\).
 -   The parameters \\(l, r, s\\) that satisfies \\(1 \leq l \leq r \leq n\\) and \\(1 \leq s \leq \frac{n(n + 1)}{2}\\) are given.
@@ -25,7 +14,7 @@ author:
 -   Print any permutation of length \\(n\\) that fits the condition above if such a permutation exists; otherwise, -1.
 
 
-## Problem Explanation {#problem-explanation}
+## Problem Explanation
 
 First, consider the minimum and the maximum value we can generate with the length \\(r - l + 1\\).  
 Hereafter, we define \\(k = r - l + 1\\).  
