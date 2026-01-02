@@ -21,8 +21,6 @@ const postsByYear = posts.reduce((acc, post) => {
   return acc;
 }, {});
 
-console.log(postsByYear);
-
 const sortedYears = Object.keys(postsByYear).sort((a, b) => b - a);
 
 function formatDate(dateString: string): string {
