@@ -32,5 +32,6 @@ export default defineConfig({
   },
   sitemap: {
     hostname: 'https://granddaifuku.com'
-  }
+  },
+  srcExclude: ['**/README.md']
 })
