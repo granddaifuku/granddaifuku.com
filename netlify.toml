@@ -1,21 +1,21 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+  command = "pnpm docs:build"
+  publish = ".vitepress/dist"
 
 [[redirects]]
 from = "https://sad-shirley-3d5d8f.netlify.app/*"
-to = "https://www.granddaifuku.com/:splat"
+to = "https://granddaifuku.com/:splat"
 status = 301
 force = true
 
 [[redirects]]
 from = "http://sad-shirley-3d5d8f.netlify.app/*"
-to = "https://www.granddaifuku.com/:splat"
+to = "https://granddaifuku.com/:splat"
 status = 301
 force = true
 
 [[redirects]]
-from = "http://www.granddaifuku.com/*"
-to = "https://www.granddaifuku.com/:splat"
+from = "http://granddaifuku.com/*"
+to = "https://granddaifuku.com/:splat"
 status = 301
 force = true

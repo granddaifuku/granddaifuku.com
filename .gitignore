@@ -1,11 +1,12 @@
-.DS_Store
-*.elc
-
 # build output
-dist/
+.vitepress/dist/
+.vitepress/cache/
 
 # dependencies
 node_modules/
+
+# optional pnpm cache dir
+.pnpm-store/
 
 # logs
 npm-debug.log*

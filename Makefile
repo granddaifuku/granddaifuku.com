@@ -1,12 +1,7 @@
-all: build-site
-
 build-docker-image:
-	docker image build -t astro-site-builder:latest .
+	docker image build -t vitepress-dev:latest .
 
-build-site: build-docker-image
-	docker run --rm -v .:/app -v /app/node_modules astro-site-builder:latest yarn run build
+dev-site: build-docker-image
+	docker run -it --rm -p 5173:5173 -v .:/app -v /app/node_modules vitepress-dev:latest /bin/bash
 
-enter: build-docker-image
-	docker run -it --rm -v .:/app -v /app/node_modules astro-site-builder:latest /bin/bash
-
-.PHONY: build-docker-image build-site enter
+.PHONY: build-docker-image dev-site
