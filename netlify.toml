@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+  command = "pnpm run docs:build"
+  publish = "docs/.vitepress/dist"
 
 [[redirects]]
 from = "https://sad-shirley-3d5d8f.netlify.app/*"
