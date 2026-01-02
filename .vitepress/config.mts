@@ -26,5 +26,8 @@ export default defineConfig({
 		link: 'https://www.linkedin.com/in/yudai-fukushima-b89b0519b/'	
 	  }
     ]
+  },
+  markdown: {
+    math: true
   }
 })
