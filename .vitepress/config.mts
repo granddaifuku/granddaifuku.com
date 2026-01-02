@@ -4,6 +4,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "granddaifuku.com",
   description: "Yudai Fukushima's personal website",
+  markdown: {
+    math: true
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 	footer: {
@@ -27,7 +30,7 @@ export default defineConfig({
 	  }
     ]
   },
-  markdown: {
-    math: true
+  sitemap: {
+    hostname: 'https://granddaifuku.com'
   }
 })
