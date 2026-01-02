@@ -178,3 +178,8 @@ RUN pnpm install --frozen-lockfile
 
 ローカルマシンから、`localhost:5173`にアクセスをすると開発中のサイトが見られるようになる。
 
+## 参考
+- [VitePressをブログサイトとして使う](https://zenn.dev/920oj/articles/5f5f9e6e6d4011)
+- [VitePressでブログを作ってみました](https://blog.hakuteialpha.com/posts/vitepress-blog/#%E8%A8%98%E4%BA%8B%E3%83%AA%E3%82%B9%E3%83%88%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)
+- [ブログサイトを VitePress へ移行した](https://nshmura.com/posts/migration-to-vitepress/)
+- [VitePress: Getting Started](https://vitepress.dev/guide/getting-started)
