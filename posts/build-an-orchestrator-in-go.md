@@ -6,12 +6,14 @@ draft: false
 ---
 
 有給期間を利用して、[『Build an Orchestrator in Go (From Scratch)』](https://www.manning.com/books/build-an-orchestrator-in-go-from-scratch)という本を読みました。  
-文字通り k8s のようなコンテナオーケストレーションツールを Go で作成するというものです。  
+文字通り k8s のようなコンテナオーケストレーションツールを Go で作成するというものです。
 
 ## Part 1: Introduction
+
 この章ではオーケストレーションツールが盛んになってきている理由や、オーケストレーターのざっくりとした仕組み、この本で作成する `cube` についての概要が述べられています。
 
 ここでは、オーケストレーションシステムを
+
 - Job
 - Task
 - Scheduler
@@ -25,7 +27,8 @@ draft: false
 そして、上記で説明されたメンタルモデルに合わせて今後、`cube` を実装していきます。
 
 ## Part 2: Worker
-この章では、Worker (Kubernetes でいう Node) を実装してきます。  
+
+この章では、Worker (Kubernetes でいう Node) を実装してきます。
 
 1. Worker の実装
 2. Worker とやり取りするための API の実装（Manager のインターフェースとなる部分）
@@ -96,6 +99,7 @@ Starting Cube worker
 ```
 
 ## Part 3: Manager
+
 この章では、Manager (Kubernetes でいう Control Plane) を実装していきます。
 
 1. Manager 本体の実装
@@ -118,7 +122,9 @@ Worker と同様に Manager 本体の実装が終わると、つぎは、API ser
 ```
 
 ## Part 4: Refactoring
+
 この章では、
+
 1. Scheduler
 2. Persistent Datastore
 
@@ -130,17 +136,18 @@ Persistent Datastore では、task や job を保存しておくことの重要�
 
 なお、自分は、Epvm, boltDB に関しては手をつけずスキップしました。
 
-
 ## Part 5: CLI
+
 この章では、[Cobra](https://github.com/spf13/cobra) を用いて cube CLI の実装をしていきます。  
 この章もスキップしたので詳しくは本を読んでください。
 
 ## 感想
+
 4 章のスケジューラまで読めば基本的な動作をするオーケストレーターを作成することができます。  
-なんとなく日常で使っている Kubernetes などのオーケストレーションシステムがどのように実装できるのかを手を動かしながらざっくりと理解するのに良い本だと思います。  
+なんとなく日常で使っている Kubernetes などのオーケストレーションシステムがどのように実装できるのかを手を動かしながらざっくりと理解するのに良い本だと思います。
 
 ## 参考リンク
+
 - [Build an Orchestrator in Go (From Scratch)](https://www.manning.com/books/build-an-orchestrator-in-go-from-scratch)
 - [公式で提供されているソースコード](https://github.com/buildorchestratoringo)
-- [自分の実装](https://github.com/granddaifuku/cube
-)
+- [自分の実装](https://github.com/granddaifuku/cube)

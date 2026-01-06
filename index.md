@@ -13,6 +13,4 @@ hero:
     - theme: alt
       text: About Me
       link: /about
-	  
 ---
-
