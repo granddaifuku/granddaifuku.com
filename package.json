@@ -1,12 +1,15 @@
 {
-  "devDependencies": {
-    "markdown-it-mathjax3": "^4.3.2",
-    "vitepress": "2.0.0-alpha.15"
-  },
+  "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check"
   },
-  "type": "module"
+  "devDependencies": {
+    "markdown-it-mathjax3": "^4.3.2",
+    "oxfmt": "^0.23.0",
+    "vitepress": "2.0.0-alpha.15"
+  }
 }
