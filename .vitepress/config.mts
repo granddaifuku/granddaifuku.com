@@ -1,5 +1,7 @@
 import { defineConfig } from "vitepress";
 
+import { SITE_URL } from "./site";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "granddaifuku.com",
@@ -33,7 +35,7 @@ export default defineConfig({
     ],
   },
   sitemap: {
-    hostname: "https://granddaifuku.com",
+    hostname: SITE_URL,
   },
   srcExclude: ["**/README.md"],
 });
