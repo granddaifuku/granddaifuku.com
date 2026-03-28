@@ -37,5 +37,5 @@ export default defineConfig({
   sitemap: {
     hostname: SITE_URL,
   },
-  srcExclude: ["**/README.md"],
+  srcExclude: ["**/README.md", "**/AGENTS.md"],
 });
