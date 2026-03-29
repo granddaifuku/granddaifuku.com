@@ -71,6 +71,18 @@ async function copyLink() {
   resetCopyStatus();
 }
 
+const copyStatusMessage = computed(() => {
+  if (copyStatus.value === "success") {
+    return "Copied!";
+  }
+
+  if (copyStatus.value === "error") {
+    return "Copy failed.";
+  }
+
+  return "";
+});
+
 onBeforeUnmount(() => {
   if (copyFeedbackTimer) {
     clearTimeout(copyFeedbackTimer);
@@ -80,36 +92,31 @@ onBeforeUnmount(() => {
 
 <template>
   <div v-if="isPostPage" class="post-share-actions">
-    <p class="post-share-actions__label">Share this post</p>
-
     <div class="post-share-actions__buttons">
       <VPButton theme="brand" text="Share on X" :href="xShareUrl" />
 
-      <VPButton tag="button" theme="alt" text="Copy link" @click="copyLink" />
-    </div>
+      <div class="post-share-actions__copy-button">
+        <VPButton tag="button" theme="alt" text="Copy link" @click="copyLink" />
 
-    <p class="post-share-actions__status" :data-state="copyStatus" aria-live="polite">
-      {{
-        copyStatus === "success"
-          ? "Link copied."
-          : copyStatus === "error"
-            ? "Could not copy the link."
-            : ""
-      }}
-    </p>
+        <span
+          v-if="copyStatus !== 'idle'"
+          class="post-share-actions__tooltip"
+          :data-state="copyStatus"
+          role="status"
+          aria-live="polite"
+        >
+          {{ copyStatusMessage }}
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .post-share-actions {
   margin-top: 24px;
-}
-
-.post-share-actions__label {
-  margin: 0 0 12px;
-  color: var(--vp-c-text-2);
-  font-size: 14px;
-  font-weight: 600;
+  padding-top: 24px;
+  border-top: 1px solid var(--vp-c-divider);
 }
 
 .post-share-actions__buttons {
@@ -118,17 +125,62 @@ onBeforeUnmount(() => {
   gap: 12px;
 }
 
-.post-share-actions__status {
-  min-height: 24px;
-  margin: 12px 0 0;
-  font-size: 14px;
+.post-share-actions__copy-button {
+  position: relative;
 }
 
-.post-share-actions__status[data-state="success"] {
-  color: var(--vp-c-brand-1);
+.post-share-actions__tooltip {
+  --post-share-tooltip-accent: var(--vp-c-divider);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  z-index: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--post-share-tooltip-accent);
+  border-radius: 10px;
+  background: var(--vp-c-bg-elv);
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  line-height: 1.2;
+  max-width: min(180px, calc(100vw - 2rem));
+  text-align: center;
+  white-space: normal;
+  pointer-events: none;
+  transform: translateX(-50%);
+  box-shadow: var(--vp-shadow-2);
 }
 
-.post-share-actions__status[data-state="error"] {
+.post-share-actions__tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid var(--post-share-tooltip-accent);
+  border-bottom: 1px solid var(--post-share-tooltip-accent);
+  background: var(--vp-c-bg-elv);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.post-share-actions__tooltip[data-state="success"] {
+  --post-share-tooltip-accent: var(--vp-c-brand-1);
+}
+
+.post-share-actions__tooltip[data-state="error"] {
+  --post-share-tooltip-accent: var(--vp-c-danger-1);
   color: var(--vp-c-danger-1);
+}
+
+@media (max-width: 480px) {
+  .post-share-actions__tooltip {
+    left: 0;
+    transform: none;
+  }
+
+  .post-share-actions__tooltip::after {
+    left: 24px;
+    transform: rotate(45deg);
+  }
 }
 </style>
