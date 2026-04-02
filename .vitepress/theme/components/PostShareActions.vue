@@ -20,7 +20,7 @@ const isPostPage = computed(() => {
 });
 
 const postTitle = computed(() => {
-  return typeof page.value.frontmatter.title === "string" ? page.value.frontmatter.title : "";
+  return page.value.frontmatter.title;
 });
 
 const postPath = computed(() => {
