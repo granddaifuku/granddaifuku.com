@@ -5,11 +5,14 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
     "format": "oxfmt",
-    "format:check": "oxfmt --check"
+    "format:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
   },
   "devDependencies": {
     "markdown-it-mathjax3": "^4.3.2",
     "oxfmt": "^0.23.0",
+    "oxlint": "^1.58.0",
     "vitepress": "2.0.0-alpha.15"
   }
 }
