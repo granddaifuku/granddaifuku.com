@@ -1,4 +1,4 @@
-FROM node:25.2.1-slim
+FROM node:24.22.1-slim
 
 RUN npm install -g pnpm@10.26.2
 
