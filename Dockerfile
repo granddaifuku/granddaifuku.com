@@ -1,8 +1,8 @@
-FROM node:25.2.1-slim
+FROM node:24.22.1-slim
 
-RUN npm install -g pnpm@10.26.2
+RUN npm install -g pnpm@12.16.1
 
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile
